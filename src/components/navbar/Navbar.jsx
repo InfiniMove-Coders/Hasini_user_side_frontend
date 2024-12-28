@@ -10,7 +10,6 @@ const Navbar = () => {
 			<Navbar1 />
 			<Navbar2 />
 			<Navbar3 />
-			<Carousel />
 		</div>
 	)
 }

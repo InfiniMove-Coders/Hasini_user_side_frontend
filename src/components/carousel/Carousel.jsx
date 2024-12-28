@@ -55,31 +55,31 @@ const Carousel = () => {
 					<SwiperSlide>
 						<Carousel_slide
 							image={"/images/carousel/a.png"}
-							onClick={() => { alert("slide1") }}
+							onClick={() => { return }}
 						/>
 					</SwiperSlide>
 					<SwiperSlide>
 						<Carousel_slide
 							image={"/images/carousel/b.png"}
-							onClick={() => { alert("slide1") }}
+							onClick={() => { return }}
 						/>
 					</SwiperSlide>
 					<SwiperSlide>
 						<Carousel_slide
 							image={"/images/carousel/c.png"}
-							onClick={() => { alert("slide1") }}
+							onClick={() => { return }}
 						/>
 					</SwiperSlide>
 					<SwiperSlide>
 						<Carousel_slide
 							image={"/images/carousel/d.png"}
-							onClick={() => { alert("slide1") }}
+							onClick={() => { return }}
 						/>
 					</SwiperSlide>
 					<SwiperSlide>
 						<Carousel_slide
 							image={"/images/carousel/e.png"}
-							onClick={() => { alert("slide1") }}
+							onClick={() => { return }}
 						/>
 					</SwiperSlide>
 				</Swiper>
