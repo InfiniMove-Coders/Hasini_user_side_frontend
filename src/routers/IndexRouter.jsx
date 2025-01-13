@@ -5,6 +5,8 @@ import Navbar from "../components/navbar/Navbar"
 import Carousel from "../components/carousel/Carousel"
 import ItemDetails from "../components/ItemDetails/ItemDetails"
 
+import Account from "../components/MyAccount/Account"
+
 const IndexRouter = () => {
 	return (
 		<Routes>
@@ -12,6 +14,7 @@ const IndexRouter = () => {
 			<Route path="navbar" element={<Navbar />} />
 			<Route path="carousel" element={<Carousel />} />
 			<Route path="itemdetails" element={<ItemDetails />} />
+			<Route path="account" element={<Account/>}/>
 			<Route path="*" element={<NotFound />} />
 		</Routes>
 	)
