@@ -4,7 +4,8 @@ import NotFound from "../pages/NotFound"
 import Navbar from "../components/navbar/Navbar"
 import Carousel from "../components/carousel/Carousel"
 import ItemDetails from "../components/ItemDetails/ItemDetails"
-
+import ContactForm from "../components/Contact/ContactUS"
+import Loading from "../components/Loading/Loading"
 import Account from "../components/MyAccount/Account"
 
 const IndexRouter = () => {
@@ -15,6 +16,8 @@ const IndexRouter = () => {
 			<Route path="carousel" element={<Carousel />} />
 			<Route path="itemdetails" element={<ItemDetails />} />
 			<Route path="account" element={<Account/>}/>
+			<Route path="contact" element={<ContactForm/>} />
+			<Route path="Loading" element={<Loading/>} />
 			<Route path="*" element={<NotFound />} />
 		</Routes>
 	)
