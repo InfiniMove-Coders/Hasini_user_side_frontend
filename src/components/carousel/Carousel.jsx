@@ -84,7 +84,7 @@ const Carousel = () => {
 					</SwiperSlide>
 				</Swiper>
 
-				<div className="custom-navigation">
+				<div className="custom-navigation border-[black] border-[0px]">
 					<button className="custom-prev"><ArrowBack /></button>
 					<div className="custom-pagination"></div>
 					<button className="custom-next"><ArrowForward /></button>

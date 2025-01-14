@@ -6,17 +6,17 @@ const Footer = () => {
     <footer className="bg-violet-500 text-white w-full">
       <div className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="space-y-6">
-        <div className="text-white text-4xl font-bold">
-            <img 
-                src="/images/icons/logo.png" 
-                alt="Logo" 
-                className="mb-4 w-20 h-20 ml-20"
+          <div className="text-white text-4xl font-bold">
+            <img
+              src="/images/icons/logo.png"
+              alt="Logo"
+              className="mb-4 w-20 h-20 ml-20"
             />
-            </div>
+          </div>
 
           <p className="text-sm leading-relaxed opacity-90">
-            Hasini Enterprises, your trusted destination for fine treats and delicacies. We are 
-            a first-time venture! Established with a passion for delivering happiness in every bite, we are 
+            Hasini Enterprises, your trusted destination for fine treats and delicacies. We are
+            a first-time venture! Established with a passion for delivering happiness in every bite, we are
             committed to providing high-quality products to our precious clients.
           </p>
           <p className="text-sm leading-relaxed opacity-90">
@@ -40,7 +40,7 @@ const Footer = () => {
           <h3 className="text-xl font-semibold mb-6">Information</h3>
           <ul className="space-y-3">
             <li><a href="#" className="text-sm hover:underline">About Us</a></li>
-            <li><a href="#" className="text-sm hover:underline">Contact Us</a></li>
+            <li><a href="contact" className="text-sm hover:underline">Contact Us</a></li>
             <li><a href="#" className="text-sm hover:underline">Terms and Conditions</a></li>
           </ul>
         </div>
@@ -56,7 +56,7 @@ const Footer = () => {
             />
             <button
               type="submit"
-              className="w-full text-white px-4 py-2 rounded text-sm border border-white rounded-lg p-4 "
+              className="w-full text-white px-4 py-2 text-sm border border-white rounded-lg p-4 "
             >
               Subscribe Now!
             </button>
@@ -64,7 +64,7 @@ const Footer = () => {
 
           <div className="mt-28 border border-white rounded-lg p-4">
             <div className="flex space-x-4">
-            <p className="text-sm mb-4">Follow us on</p>
+              <p className="text-sm mb-4">Follow us on</p>
               <a href="#" className="bg-white text-violet-500 p-2 rounded-full hover:opacity-90">
                 <Facebook size={20} />
               </a>

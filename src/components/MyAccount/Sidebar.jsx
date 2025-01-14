@@ -1,9 +1,9 @@
 import React from "react";
-import "./sidebar.css";
+import "./Sidebar.css";
 
 function Sidebar({ activeTab, setActiveTab }) {
   return (
-    <div className="sidebar-container">
+    <div className="sidebar-container border-[black] border-[0px]">
       <h3 className="sidebar-title">Manage My Account</h3>
       <button
         className={`sidebar-btn ${activeTab === "profile" ? "active" : ""}`}

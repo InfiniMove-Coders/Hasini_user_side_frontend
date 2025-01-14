@@ -8,7 +8,7 @@ const Navbar3 = () => {
 	const [keyStatus, setKeyStatus] = useState(0);
 
 	return (
-		<div className="w-full h-auto bg-[#133DF6] border-[black] border-[0px] py-[5px] flex flex-row items-center justify-center gap-[100px]">
+		<div className="w-full h-auto bg-[#133DF6] border-[black] border-[0px] py-[5px] flex flex-row items-center justify-center gap-[100px] z-[5]">
 			<Navbar_button
 				icon={keyStatus == 0 ? <Cookie className="text-[#133DF6]" /> : <Cookie className="text-[#ffffff]" />}
 				name={"Chocolates"} keyStatus={keyStatus} buttonKey={0}
