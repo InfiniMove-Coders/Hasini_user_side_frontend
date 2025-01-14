@@ -1,9 +1,9 @@
 import React from "react";
-import "./profile.css";
+import "./Profile.css";
 
 function Profile() {
   return (
-    <div className="profile">
+    <div className="profile border-[black] border-[0px]" >
       <h2 className="profile-title">Welcome! <span className="profile-name">Md Ishrath</span></h2>
       <div className="profile-form">
         <h3 className="profile-subtitle">Edit Your Profile</h3>

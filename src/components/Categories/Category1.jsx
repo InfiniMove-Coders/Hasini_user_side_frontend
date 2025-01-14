@@ -114,86 +114,86 @@ const Category1 = () => {
       onToggleWishlist: (id) => console.log(`Toggling wishlist for ${id}`)
     },
     {
-        id: "5",
-        name: "Dairy Melts, Chocolate Bar",
-        imageUrl: "/api/placeholder/400/320",
-        packageInfo: "33 Pcs/Box, 24 Box/Carton",
-        originalPrice: 170,
-        discountPercentage: 3,
-        finalPrice: 145,
-        pricePerPiece: 5,
-        rating: 4.5,
-        onAddToCart: (id) => console.log(`Adding ${id} to cart`),
-        onToggleWishlist: (id) => console.log(`Toggling wishlist for ${id}`)
-      },
-      {
-        id: "6",
-        name: "Dairy Melts, Chocolate Bar",
-        imageUrl: "/api/placeholder/400/320",
-        packageInfo: "33 Pcs/Box, 24 Box/Carton",
-        originalPrice: 170,
-        discountPercentage: 3,
-        finalPrice: 155,
-        pricePerPiece: 5,
-        rating: 4.5,
-        onAddToCart: (id) => console.log(`Adding ${id} to cart`),
-        onToggleWishlist: (id) => console.log(`Toggling wishlist for ${id}`)
-      },
-      {
-        id: "7",
-        name: "Dairy Melts, Chocolate Bar",
-        imageUrl: "/api/placeholder/400/320",
-        packageInfo: "33 Pcs/Box, 24 Box/Carton",
-        originalPrice: 160,
-        discountPercentage: 3,
-        finalPrice: 165,
-        pricePerPiece: 5,
-        rating: 4.5,
-        onAddToCart: (id) => console.log(`Adding ${id} to cart`),
-        onToggleWishlist: (id) => console.log(`Toggling wishlist for ${id}`)
-      },
-      {
-        id: "7",
-        name: "Dairy Melts, Chocolate Bar",
-        imageUrl: "/api/placeholder/400/320",
-        packageInfo: "33 Pcs/Box, 24 Box/Carton",
-        originalPrice: 170,
-        discountPercentage: 3,
-        finalPrice: 175,
-        pricePerPiece: 5,
-        rating: 4.5,
-        onAddToCart: (id) => console.log(`Adding ${id} to cart`),
-        onToggleWishlist: (id) => console.log(`Toggling wishlist for ${id}`)
-      }
+      id: "5",
+      name: "Dairy Melts, Chocolate Bar",
+      imageUrl: "/api/placeholder/400/320",
+      packageInfo: "33 Pcs/Box, 24 Box/Carton",
+      originalPrice: 170,
+      discountPercentage: 3,
+      finalPrice: 145,
+      pricePerPiece: 5,
+      rating: 4.5,
+      onAddToCart: (id) => console.log(`Adding ${id} to cart`),
+      onToggleWishlist: (id) => console.log(`Toggling wishlist for ${id}`)
+    },
+    {
+      id: "6",
+      name: "Dairy Melts, Chocolate Bar",
+      imageUrl: "/api/placeholder/400/320",
+      packageInfo: "33 Pcs/Box, 24 Box/Carton",
+      originalPrice: 170,
+      discountPercentage: 3,
+      finalPrice: 155,
+      pricePerPiece: 5,
+      rating: 4.5,
+      onAddToCart: (id) => console.log(`Adding ${id} to cart`),
+      onToggleWishlist: (id) => console.log(`Toggling wishlist for ${id}`)
+    },
+    {
+      id: "7",
+      name: "Dairy Melts, Chocolate Bar",
+      imageUrl: "/api/placeholder/400/320",
+      packageInfo: "33 Pcs/Box, 24 Box/Carton",
+      originalPrice: 160,
+      discountPercentage: 3,
+      finalPrice: 165,
+      pricePerPiece: 5,
+      rating: 4.5,
+      onAddToCart: (id) => console.log(`Adding ${id} to cart`),
+      onToggleWishlist: (id) => console.log(`Toggling wishlist for ${id}`)
+    },
+    {
+      id: "7",
+      name: "Dairy Melts, Chocolate Bar",
+      imageUrl: "/api/placeholder/400/320",
+      packageInfo: "33 Pcs/Box, 24 Box/Carton",
+      originalPrice: 170,
+      discountPercentage: 3,
+      finalPrice: 175,
+      pricePerPiece: 5,
+      rating: 4.5,
+      onAddToCart: (id) => console.log(`Adding ${id} to cart`),
+      onToggleWishlist: (id) => console.log(`Toggling wishlist for ${id}`)
+    }
   ];
-        const handleViewMore = () => {
-            console.log('View More clicked');
-        };
-        return (
-            <div className="max-w-7xl mx-auto p-6">
+  const handleViewMore = () => {
+    console.log('View More clicked');
+  };
+  return (
+    <div className="max-w-7xl mx-auto p-6">
 
-              <div className="flex items-center justify-between mb-6">
-                <h2 className="text-2xl font-semibold text-gray-800">Chocolates</h2>
-              </div>
-        
-              <div className="flex overflow-x-scroll space-x-4 pb-4 scrollbar-hide">
-                {products.slice(0, 7).map((product) => (
-                  <ProductCard key={product.id} {...product} />
-                ))}
+      <div className="flex items-center justify-between mb-6">
+        <h2 className="text-2xl font-semibold text-gray-800">Chocolates</h2>
+      </div>
 
-                {products.length > 7 && (
-                  <div className="flex flex-col items-center justify-center">
-                    <button
-                      className="w-14 h-14 rounded-full bg-blue-600 flex items-center justify-center text-white hover:bg-blue-700 transition-colors shadow-md"
-                      onClick={handleViewMore}
-                    >
-                      <ChevronRight className="w-6 h-6" />
-                    </button>
-                    <span className="text-blue-600 font-medium mt-2">View More</span>
-                  </div>
-                )}
-              </div>
-            </div>
-          );
-        };
+      <div className="flex overflow-x-scroll space-x-4 pb-4 scrollbar-hide">
+        {products.slice(0, 7).map((product) => (
+          <ProductCard key={product.id} {...product} />
+        ))}
+
+        {products.length > 7 && (
+          <div className="flex flex-col items-center justify-center">
+            <button
+              className="w-14 h-14 rounded-full bg-blue-600 flex items-center justify-center text-white hover:bg-blue-700 transition-colors shadow-md"
+              onClick={handleViewMore}
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+            <span className="text-blue-600 font-medium mt-2">View More</span>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
 export default Category1;

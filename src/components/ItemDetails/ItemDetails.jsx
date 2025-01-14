@@ -6,6 +6,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Navigation } from "swiper/modules";
 import "./itemDetails.css"
+import Navbar1 from "../navbar/Navbar1";
+import Navbar2 from "../navbar/Navbar2";
+import Footer from "../footer/footer";
 
 const ItemDetails = () => {
 
@@ -42,9 +45,11 @@ const ItemDetails = () => {
 
 	return (
 		<>
-			<p
-				className="px-[100px] pt-[30px]"
-			>
+			<div className='w-[100%] h-auto fixed top-[0px]'>
+				<Navbar1 />
+				<Navbar2 />
+			</div>
+			<p className="px-[100px] pt-[30px] mt-[130px]" >
 				<span className="opacity-[0.5]">Home /</span>
 				<span className="opacity-[0.5]"> Chocolates /</span>
 				<span> Dairy Melts Chocolate Bar</span>
@@ -102,7 +107,7 @@ const ItemDetails = () => {
 			<div className="h-[1px] bg-[#133DF6] w-[70%] m-auto"></div>
 			<div className="mt-[40px] mb-[40px] w-full h-auto flex flex-col items-center justify-start gap-[40px] px-[60px]">
 				<p className="w-fit h-auto px-[100px] py-[3px] rounded-[25px] bg-[#4000FF] text-white text-[160%] font-bold">Similar Products</p>
-				<div className="w-full h-auto border-[black] border-[0px] relative">
+				<div className="w-full h-auto border-[black] border-[0px] relative z-[-1]">
 					<Swiper
 						grabCursor={true}
 						slidesPerView={4}
@@ -144,10 +149,9 @@ const ItemDetails = () => {
 					<div className="custom-prev"><ArrowBack /></div>
 					<div className="custom-next"><ArrowForward /></div>
 
-
 				</div>
 			</div >
-
+			<Footer />
 		</>
 	)
 }
