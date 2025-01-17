@@ -2,13 +2,13 @@ import { FavoriteBorderOutlined, FavoriteOutlined, Image, ShoppingCart, Star } f
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const ItemCard = ({ item }) => {
+const CategoryCard = ({ item }) => {
 
 	const [favourite, setFavourite] = useState(false);
 	const navigate = useNavigate();
 
 	const AddToCart = async () => {
-		navigate("/itemdetails")
+		navigate("/itemdetails");
 	}
 
 	const AddToFavourite = async () => {
@@ -16,7 +16,7 @@ const ItemCard = ({ item }) => {
 	}
 
 	return (
-		<div className="w-full border-[black] border-[0px] flex flex-col items-center justify-start gap-[15px]">
+		<div className="w-[290px] border-[black] border-[0px] flex flex-col items-center justify-start gap-[15px]">
 			<div className="w-full h-auto bg-white rounded-[6px] p-[10px] flex flex-col items-start justify-start border-[#D9D9D9] border-[2px] gap-[5px]">
 				<div className="w-[100%] h-[15dvw] border-[#D9D9D9] border-[1px] flex items-center justify-center rounded-[8px] overflow-hidden relative">
 					{item?.imageurl
@@ -75,4 +75,4 @@ const ItemCard = ({ item }) => {
 	)
 }
 
-export default ItemCard
+export default CategoryCard

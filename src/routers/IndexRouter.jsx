@@ -5,11 +5,13 @@ import ItemDetails from "../components/ItemDetails/ItemDetails"
 import ContactForm from "../components/Contact/ContactUS"
 import Loading from "../components/Loading/Loading"
 import Account from "../components/MyAccount/Account"
+import Category from "../components/categoryDetails/Category"
 
 const IndexRouter = () => {
 	return (
 		<Routes>
 			<Route path="" element={<Home />} />
+			<Route path="category" element={<Category />} />
 			<Route path="itemdetails" element={<ItemDetails />} />
 			<Route path="account" element={<Account />} />
 			<Route path="contact" element={<ContactForm />} />
