@@ -12,11 +12,11 @@ const CancellationCard = () => {
 					<p className="text-[130%] font-[500]">Dairy Melts, Chocolate Bar</p>
 					<div className="w-auto h-auto flex flex-col items-center justify-start gap-[5px]">
 						<div className="flex flex-row items-center justify-between gap-[2px]">
-							<StarBorderSharp />
-							<StarBorderSharp />
-							<StarBorderSharp />
-							<StarBorderSharp />
-							<StarBorderSharp />
+							<StarBorderSharp style={{ fontSize: "160%", cursor: "pointer", }} />
+							<StarBorderSharp style={{ fontSize: "160%", cursor: "pointer", }} />
+							<StarBorderSharp style={{ fontSize: "160%", cursor: "pointer", }} />
+							<StarBorderSharp style={{ fontSize: "160%", cursor: "pointer", }} />
+							<StarBorderSharp style={{ fontSize: "160%", cursor: "pointer", }} />
 						</div>
 						<p className="text-[110%] opacity-[0.6] font-[300]">Rate Out Product</p>
 					</div>
