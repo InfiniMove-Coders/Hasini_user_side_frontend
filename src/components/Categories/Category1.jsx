@@ -1,5 +1,6 @@
 import React from 'react';
 import { Heart, ChevronRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const ProductCard = ({
   id,
@@ -11,9 +12,17 @@ const ProductCard = ({
   finalPrice,
   pricePerPiece,
   rating,
-  onAddToCart,
-  onToggleWishlist,
 }) => {
+  const navigate = useNavigate();
+
+  const handleAddToCart = () => {
+    console.log(`Adding ${id} to cart`);
+    navigate('/itemdetails');
+  };
+
+  const handleToggleWishlist = () => {
+    console.log(`Toggling wishlist for ${id}`);
+  };
   return (
     <div className="w-64 p-4 bg-white rounded-lg shadow-md border border-gray-200 flex-shrink-0">
 
@@ -49,7 +58,7 @@ const ProductCard = ({
 
         <button
           className="w-full py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors mt-4"
-          onClick={() => onAddToCart(id)}
+          onClick={handleAddToCart}
         >
           Add to Cart
         </button>
@@ -59,6 +68,7 @@ const ProductCard = ({
 };
 
 const Category1 = () => {
+  const navigate = useNavigate();
   //backend data
   const products = [
     {
@@ -71,8 +81,6 @@ const Category1 = () => {
       finalPrice: 105,
       pricePerPiece: 5,
       rating: 4.5,
-      onAddToCart: (id) => console.log(`Adding ${id} to cart`),
-      onToggleWishlist: (id) => console.log(`Toggling wishlist for ${id}`)
     },
     {
       id: "2",
@@ -84,8 +92,6 @@ const Category1 = () => {
       finalPrice: 115,
       pricePerPiece: 5,
       rating: 4.5,
-      onAddToCart: (id) => console.log(`Adding ${id} to cart`),
-      onToggleWishlist: (id) => console.log(`Toggling wishlist for ${id}`)
     },
     {
       id: "3",
@@ -97,8 +103,6 @@ const Category1 = () => {
       finalPrice: 125,
       pricePerPiece: 5,
       rating: 4.5,
-      onAddToCart: (id) => console.log(`Adding ${id} to cart`),
-      onToggleWishlist: (id) => console.log(`Toggling wishlist for ${id}`)
     },
     {
       id: "4",
@@ -110,8 +114,7 @@ const Category1 = () => {
       finalPrice: 135,
       pricePerPiece: 5,
       rating: 4.5,
-      onAddToCart: (id) => console.log(`Adding ${id} to cart`),
-      onToggleWishlist: (id) => console.log(`Toggling wishlist for ${id}`)
+ 
     },
     {
       id: "5",
@@ -123,8 +126,7 @@ const Category1 = () => {
       finalPrice: 145,
       pricePerPiece: 5,
       rating: 4.5,
-      onAddToCart: (id) => console.log(`Adding ${id} to cart`),
-      onToggleWishlist: (id) => console.log(`Toggling wishlist for ${id}`)
+      
     },
     {
       id: "6",
@@ -136,8 +138,7 @@ const Category1 = () => {
       finalPrice: 155,
       pricePerPiece: 5,
       rating: 4.5,
-      onAddToCart: (id) => console.log(`Adding ${id} to cart`),
-      onToggleWishlist: (id) => console.log(`Toggling wishlist for ${id}`)
+    
     },
     {
       id: "7",
@@ -149,8 +150,7 @@ const Category1 = () => {
       finalPrice: 165,
       pricePerPiece: 5,
       rating: 4.5,
-      onAddToCart: (id) => console.log(`Adding ${id} to cart`),
-      onToggleWishlist: (id) => console.log(`Toggling wishlist for ${id}`)
+    
     },
     {
       id: "7",
@@ -162,12 +162,10 @@ const Category1 = () => {
       finalPrice: 175,
       pricePerPiece: 5,
       rating: 4.5,
-      onAddToCart: (id) => console.log(`Adding ${id} to cart`),
-      onToggleWishlist: (id) => console.log(`Toggling wishlist for ${id}`)
     }
   ];
   const handleViewMore = () => {
-    console.log('View More clicked');
+    navigate('/category');
   };
   return (
     <div className="max-w-7xl mx-auto p-6">
