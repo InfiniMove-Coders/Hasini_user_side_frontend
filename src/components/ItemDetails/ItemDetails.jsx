@@ -9,6 +9,7 @@ import "./itemDetails.css"
 import Navbar1 from "../navbar/Navbar1";
 import Navbar2 from "../navbar/Navbar2";
 import Footer from "../footer/footer";
+import "animate.css";
 
 const ItemDetails = () => {
 
@@ -33,6 +34,10 @@ const ItemDetails = () => {
 		alert("You order the product successfully");
 	}
 
+	const AddToCart = () => {
+		alert("Product added to cart successfully");
+	}
+
 	const item = {
 		imageurl: "/images/item_details/a.jpg",
 		name: "Dairy Melts , Chocolate Bar ",
@@ -55,8 +60,13 @@ const ItemDetails = () => {
 				<span> Dairy Melts Chocolate Bar</span>
 			</p>
 			<div className="w-full h-auto border-[black] border-[0px] flex flex-row items-start justify-center gap-[100px] pt-[40px] pb-[40px]">
-				<div className="w-[30%] h-[400px] border-[#D9D9D9] border-[1px] flex flex-row items-center justify-center rounded-[8px] overflow-hidden">
+				<div className="w-[30%] h-[400px] border-[#D9D9D9] border-[1px] flex flex-row items-center justify-center rounded-[8px] overflow-hidden relative">
 					<img src="/images/item_details/a.jpg" className="h-[100%]" />
+					<div className="absolute bottom-[10px] right-[10px] border-[0px] border-[black] w-auto h-auto cursor-pointer"
+						onClick={AddToFavourite}
+					>
+						{favourite ? <FavoriteOutlined className="text-[80%] text-[red]  translate-x-[-5px] translate-y-[-5px] transition-all animate__animated animate__rubberBand" /> : <FavoriteBorderOutlined className="text-[100%]" />}
+					</div>
 				</div>
 				<div className="w-[40%] h-auto border-[0px] border-[black]">
 					<p className="text-[160%] text-[#262626]">{"Dairy Melts , Chocolate Bar "}</p>
@@ -90,17 +100,23 @@ const ItemDetails = () => {
 						</div>
 						<button
 							className="px-[25px] py-[6px] text-white rounded-[4px] bg-[#133DF6] cursor-pointer"
+							onClick={AddToCart}
+						>
+							Add to Cart
+						</button>
+						<button
+							className="px-[25px] py-[6px] text-white rounded-[4px] bg-[#133DF6] cursor-pointer"
 							onClick={BuyProduct}
 						>
 							Buy Now
 						</button>
-						<div
+						{/* <div
 							className="p-[5px] bg-[#133DF6] rounded-[3px] text-white text-[50%] cursor-pointer"
 							onClick={AddToFavourite}
 						>
 							{favourite ? <FavoriteOutlined className="text-[100%]" /> : <FavoriteBorderOutlined className="text-[90%]" />}
 
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</div>
@@ -109,7 +125,7 @@ const ItemDetails = () => {
 				<p className="w-fit h-auto px-[100px] py-[3px] rounded-[25px] bg-[#4000FF] text-white text-[160%] font-bold">Similar Products</p>
 				<div className="w-full h-auto border-[black] border-[0px] relative z-[0]">
 					<Swiper
-						grabCursor={true}
+						grabCursor={false}
 						slidesPerView={4}
 						spaceBetween={15}
 						navigation={{

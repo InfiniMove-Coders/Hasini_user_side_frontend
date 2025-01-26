@@ -14,7 +14,7 @@ const Home = () => {
 		<div>
 			<Navbar1 />
 			<Navbar2 />
-			<Navbar3 />
+			<Navbar3 keyStatusState={-1} />
 			<Carousel />
 			<Category1 />
 			<Category2 />

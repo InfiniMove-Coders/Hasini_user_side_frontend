@@ -1,22 +1,26 @@
 import { FavoriteBorderOutlined, FavoriteOutlined, Image, ShoppingCart, Star } from "@mui/icons-material"
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "animate.css";
 
 const CategoryCard = ({ item }) => {
 
 	const [favourite, setFavourite] = useState(false);
 	const navigate = useNavigate();
 
-	const AddToCart = async () => {
+	const ItemDetails = async () => {
 		navigate("/itemdetails");
 	}
 
-	const AddToFavourite = async () => {
+	const AddToFavourite = async (event) => {
+		event.stopPropagation();
 		favourite ? setFavourite(false) : setFavourite(true);
 	}
 
 	return (
-		<div className="w-[290px] border-[black] border-[0px] flex flex-col items-center justify-start gap-[15px]">
+		<div className="w-[290px] border-[black] border-[0px] flex flex-col items-center justify-start gap-[15px] cursor-pointer"
+			onClick={ItemDetails}
+		>
 			<div className="w-full h-auto bg-white rounded-[6px] p-[10px] flex flex-col items-start justify-start border-[#D9D9D9] border-[2px] gap-[5px]">
 				<div className="w-[100%] h-[15dvw] border-[#D9D9D9] border-[1px] flex items-center justify-center rounded-[8px] overflow-hidden relative">
 					{item?.imageurl
@@ -26,11 +30,11 @@ const CategoryCard = ({ item }) => {
 						<Image />
 					}
 					<div
-						className="border-[rgba(0,0,0,0.5)] border-[1px] absolute bottom-[5px] right-[5px] cursor-pointer rounded-[50%] shadow-[0px_0px_4px_rgba(0,0,0,0.2)] p-[2px] scale-[0.9]"
+						className="border-[rgba(0,0,0,0.5)] border-[0px] absolute bottom-[5px] right-[5px] cursor-pointer rounded-[50%] shadow-[0px_0px_0px_rgba(0,0,0,0.2)] p-[2px] scale-[0.9]"
 						onClick={AddToFavourite}
 					>
 						{favourite ?
-							<FavoriteOutlined />
+							<FavoriteOutlined className="text-[red] animate__animated animate__rubberBand" />
 							:
 							<FavoriteBorderOutlined />
 
@@ -63,13 +67,13 @@ const CategoryCard = ({ item }) => {
 					</p>
 				</div>
 
-				<div
+				{/* <div
 					className=" bg-[#133df6] rounded-[20px] w-auto h-auto flex flex-row items-center justify-between gap-[15px] px-[35px] py-[5px] text-white m-auto cursor-pointer"
-					onClick={AddToCart}
+					onClick={ItemDetails}
 				>
-					{/* <ShoppingCart /> */}
+					<ShoppingCart />
 					<p className="font-bold">Add to Cart</p>
-				</div>
+				</div> */}
 			</div>
 		</div>
 	)

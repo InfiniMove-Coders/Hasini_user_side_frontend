@@ -21,7 +21,7 @@ const Navbar2 = () => {
 	}
 
 	return (
-		<div className="w-full h-[80px] border-[black] border-[0px] flex flex-row items-center justify-center gap-[190px] shadow-[0px_2px_4px_#133DF6aa] bg-white z-[5]">
+		<div className="w-full h-auto md:h-[80px] border-[black] border-[0px] flex flex-col-reverse md:flex-row items-center md:justify-center justify-between py-[10px] md:py-[0px] md:gap-[190px] shadow-[0px_2px_4px_#133DF6aa] bg-white z-[5]">
 			<div className="w-[290px] h-[40px] rounded-[20px] border-[#133DF6] border-[1px] overflow-hidden flex flex-row items-center justify-between p-[5px] shadow-[0px_3px_4px_#00000030]">
 				<input
 					type="text"
@@ -33,14 +33,15 @@ const Navbar2 = () => {
 					<Search />
 				</div>
 			</div>
-			<div className="w-auto h-[60px] flex flex-row items-center justify-between gap-[10px] border-[black] border-[0px] cursor-pointer">
-				<img src="/images/icons/logo.png" className="h-[70%]" />
+			<div className="w-auto h-[60px] flex flex-row items-center justify-between gap-[10px] border-[black] border-[0px] cursor-pointer translate-x-[-50px]"
+				onClick={() => navigate("/", { replace: true })}
+			>
+				<img src="/images/icons/logo1.png" className="h-[70%]" />
 				<p
-					className="text-[200%] text-[#38023B] translate-x-[-80px]"
-					onClick={() => navigate("/", { replace: true })}
+					className="text-[200%] text-[#38023B]"
 				>HASINI ENTERPRISES</p>
 			</div>
-			<div className="w-auto h-auto flex flex-row items-center justify-between gap-[15px] border-[0px] border-[black]">
+			<div className="w-auto h-auto hidden md:flex flex-row items-center justify-between gap-[15px] border-[0px] border-[black]">
 				<div className="border-[0px] border-[black] p-[8px] rounded-[50%] hover:bg-[#133DF6] hover:text-white shadow-[0px_3px_4px_#00000050] cursor-pointer text-[#133DF6]">
 					<ShoppingCartOutlined />
 				</div>
