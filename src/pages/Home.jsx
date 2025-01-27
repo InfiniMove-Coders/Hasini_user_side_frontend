@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Category1 from '../components/Categories/Category1';
 import Category2 from '../components/Categories/Category2';
 import Category3 from '../components/Categories/Category3';
@@ -10,11 +10,18 @@ import Navbar2 from '../components/navbar/Navbar2';
 import Navbar3 from '../components/navbar/Navbar3';
 
 const Home = () => {
+
+	useEffect(() => {
+		window.scroll(0, 0);
+	}, []);
+
 	return (
 		<div>
-			<Navbar1 />
-			<Navbar2 />
-			<Navbar3 keyStatusState={-1} />
+			<div className='w-[100%] h-auto fixed top-[0px] z-[5]'>
+				<Navbar1 />
+				<Navbar2 />
+				<Navbar3 keyStatusState={-1} />
+			</div>
 			<Carousel />
 			<Category1 />
 			<Category2 />

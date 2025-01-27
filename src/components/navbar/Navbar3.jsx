@@ -10,7 +10,7 @@ const Navbar3 = ({ keyStatusState }) => {
 	const navigate = useNavigate();
 
 	return (
-		<div className="w-full h-auto bg-[#133DF6] border-[black] border-[0px] py-[5px] hidden md:flex flex-row items-center justify-center gap-[100px] z-[5]">
+		<div className="w-full h-auto bg-[#133DF6] border-[black] border-[0px] py-[5px] hidden md:flex flex-row items-center justify-around z-[5] px-[10px]">
 			<Navbar_button
 				icon={keyStatus == 0 ? <img src="/images/navbar/chocolate.png" /> : <img src="/images/navbar/chocolate1.png" />}
 				name={"Chocolates"} keyStatus={keyStatus} buttonKey={0}

@@ -1,8 +1,9 @@
 import { Logout, Person, Person2Outlined, Search, ShoppingCartOutlined, StarBorderOutlined } from "@mui/icons-material"
-import { Box, Menu } from "@mui/material"
-import { BoxIcon, FileBoxIcon } from "lucide-react";
+import { Menu, useMediaQuery } from "@mui/material"
+import { FileBoxIcon } from "lucide-react";
 import { useState } from "react"
 import { useNavigate } from "react-router-dom";
+import Dimensions from "../others/Dimensions";
 
 
 const Navbar2 = () => {
@@ -11,6 +12,8 @@ const Navbar2 = () => {
 	const open = Boolean(anchorEl);
 	const navigate = useNavigate();
 	const [loginStatus, setLoginStatus] = useState(true);
+	const medium = Dimensions.medium();
+
 
 	const handleOpen = (event) => {
 		setAnchorEl(event.currentTarget);
@@ -21,24 +24,24 @@ const Navbar2 = () => {
 	}
 
 	return (
-		<div className="w-full h-auto md:h-[80px] border-[black] border-[0px] flex flex-col-reverse md:flex-row items-center md:justify-center justify-between py-[10px] md:py-[0px] md:gap-[190px] shadow-[0px_2px_4px_#133DF6aa] bg-white z-[5]">
-			<div className="w-[290px] h-[40px] rounded-[20px] border-[#133DF6] border-[1px] overflow-hidden flex flex-row items-center justify-between p-[5px] shadow-[0px_3px_4px_#00000030]">
+		<div className="w-full h-auto md:h-[80px] border-[black] border-[0px] flex flex-col-reverse md:flex-row items-center md:justify-between justify-between pt-[1dvw] pb-[3dvw] md:pb-[0px] md:py-[0px] md:px-[50px] md:shadow-[0px_2px_4px_#133DF6aa] shadow-[0px_3px_5px_#133DF611] bg-white z-[5]">
+			<div className="w-[85%] md:w-[290px] md:h-[40px] h-[9dvw] rounded-[20px] border-[#133DF6] border-[1px] overflow-hidden flex flex-row items-center justify-between p-[5px] shadow-[0px_3px_4px_#00000030]">
 				<input
 					type="text"
 					className="border-[0px] border-[black] h-[100%] w-[80%] rounded-[20px] px-[10px] outline-none "
 					name="search"
-					placeholder="Search"
+					placeholder={medium ? "Search for  \" Vanilla ,Choclate Combo Pack\"" : "Search"}
 				/>
-				<div className="h-[100%] w-auto border-[0px] border-[black] p-[7px_5px] rounded-[20px] bg-[#133DF6] text-white flex items-center justify-center text-[90%]">
+				<div className="h-[100%] w-auto border-[0px] border-[black] md:p-[7px_5px] p-[7px_10px] rounded-[20px] bg-[#133DF6] text-white flex items-center justify-center text-[90%]">
 					<Search />
 				</div>
 			</div>
-			<div className="w-auto h-[60px] flex flex-row items-center justify-between gap-[10px] border-[black] border-[0px] cursor-pointer translate-x-[-50px]"
+			<div className="w-auto h-[60px] flex flex-row items-center justify-between gap-[10px] border-[black] border-[0px] cursor-pointer md:translate-x-[-50px]"
 				onClick={() => navigate("/", { replace: true })}
 			>
-				<img src="/images/icons/logo1.png" className="h-[70%]" />
+				<img src="/images/icons/logo1.png" className="md:h-[70%] h-[8dvw]" />
 				<p
-					className="text-[200%] text-[#38023B]"
+					className="md:text-[200%] text-[6dvw] text-[#38023B]"
 				>HASINI ENTERPRISES</p>
 			</div>
 			<div className="w-auto h-auto hidden md:flex flex-row items-center justify-between gap-[15px] border-[0px] border-[black]">

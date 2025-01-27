@@ -5,7 +5,7 @@
 	flex-direction:row;
 	align-items:center;
 	justify-content:center;
-	gap:15px
+	gap:15px;
 }
 
 
@@ -46,7 +46,7 @@
 	opacity:0.7;
   position:static;
   box-shadow:none;
-  
+  z-index:0;
 }
 
 .custom-navigation .custom-prev:hover,

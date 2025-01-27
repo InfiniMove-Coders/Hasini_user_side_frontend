@@ -20,7 +20,7 @@ const Carousel = () => {
 
 	return (
 		<>
-			<div className="w-[100%] h-auto border-[0px] border-[black] mt-[30px]">
+			<div className="w-[100%] h-auto border-[0px] border-[black] md:mt-[200px] mt-[36dvw]">
 				<Swiper
 					effect="coverflow"
 					grabCursor={true}
@@ -50,7 +50,7 @@ const Carousel = () => {
 					}}
 					modules={[EffectCoverflow, Navigation, Pagination, Autoplay]}
 					className="mySwiper"
-					style={{ border: "0px solid red", padding: "0px 0px 30px 0px", }}
+					style={{ border: "0px solid red", padding: "0px 0px 3dvw 0px", }}
 				>
 					<SwiperSlide>
 						<Carousel_slide
