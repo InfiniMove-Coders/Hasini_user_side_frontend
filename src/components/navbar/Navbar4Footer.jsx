@@ -1,0 +1,76 @@
+import { GridView, Home, HomeMax, Person2Outlined, ShoppingCart, ShoppingCartOutlined } from "@mui/icons-material"
+import HomeOutlined from "@mui/icons-material/HomeOutlined"
+import { useEffect, useState } from "react"
+import { useLocation, useNavigate } from "react-router-dom";
+
+
+const Navbar4Footer = () => {
+
+	const [keyStatus, setKeyStatus] = useState(0);
+	const navigate = useNavigate();
+	const location = useLocation();
+
+	useEffect(() => {
+		if (location.pathname == "/") {
+			setKeyStatus(0);
+		}
+		else if (location.pathname == "/categories" || location.pathname == "/category" || location.pathname == "/itemdetails") {
+			setKeyStatus(1);
+		}
+		else if (location.pathname == "/cart") {
+			setKeyStatus(2);
+		}
+		else if (location.pathname == "/account") {
+			setKeyStatus(3)
+		}
+	}, [location.pathname])
+
+	return (
+		<>
+			<div className="w-[100%] h-[18dvw] fixed bottom-[0px] z-[5] flex md:hidden flex-row items-center justify-around border-[0px] border-[black] bg-[white] shadow-[0px_-1px_4px_rgba(0,0,0,0.1)] py-[3dvw]">
+				<div
+					className="w-auto h-[100%] flex flex-col items-center justify-between gap-[0px]"
+					onClick={() => {
+						setKeyStatus(0);
+						navigate("/");
+					}}
+				>
+					<HomeOutlined style={{ fontSize: "8dvw", borderRadius: "50%", padding: keyStatus == 0 ? "1px" : "0px", backgroundColor: keyStatus == 0 ? "#133DF6" : "white", color: keyStatus == 0 ? "white" : "black" }} />
+					<p className="text-[80%]">Home</p>
+				</div>
+				<div
+					className="w-auto h-[100%] flex flex-col items-center justify-between gap-[0px]"
+					onClick={() => {
+						setKeyStatus(1);
+						navigate("/categories");
+					}}
+				>
+					<GridView style={{ fontSize: "8dvw", borderRadius: "50%", padding: keyStatus == 1 ? "3px" : "0px", backgroundColor: keyStatus == 1 ? "#133DF6" : "white", color: keyStatus == 1 ? "white" : "black" }} />
+					<p className="text-[80%]">CATEGORIES</p>
+				</div>
+				<div
+					className="w-auto h-[100%] flex flex-col items-center justify-between gap-[0px]"
+					onClick={() => {
+						setKeyStatus(2);
+						navigate("/cart");
+					}}
+				>
+					<ShoppingCartOutlined style={{ fontSize: "8dvw", borderRadius: "50%", padding: keyStatus == 2 ? "3px" : "0px", backgroundColor: keyStatus == 2 ? "#133DF6" : "white", color: keyStatus == 2 ? "white" : "black" }} />
+					<p className="text-[80%]">CART</p>
+				</div>
+				<div
+					className="w-auto h-[100%] flex flex-col items-center justify-between gap-[0px]"
+					onClick={() => {
+						setKeyStatus(3);
+						navigate("/account");
+					}}
+				>
+					<Person2Outlined style={{ fontSize: "8dvw", borderRadius: "50%", padding: keyStatus == 3 ? "1px" : "0px", backgroundColor: keyStatus == 3 ? "#133DF6" : "white", color: keyStatus == 3 ? "white" : "black" }} />
+					<p className="text-[80%]">ACCOUNT</p>
+				</div>
+			</div>
+		</>
+	)
+}
+
+export default Navbar4Footer

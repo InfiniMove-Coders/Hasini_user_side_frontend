@@ -26,7 +26,7 @@ const ContactForm = () => {
 
   return (
     <>
-      <div className='w-[100%] h-auto fixed top-[0px]'>
+      <div className='w-[100%] h-auto fixed top-[0px] z-[5]'>
         <Navbar1 />
         <Navbar2 />
       </div>

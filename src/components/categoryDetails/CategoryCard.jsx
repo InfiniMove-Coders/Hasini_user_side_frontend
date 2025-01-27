@@ -1,24 +1,31 @@
 import { FavoriteBorderOutlined, FavoriteOutlined, Image, ShoppingCart, Star } from "@mui/icons-material"
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "animate.css";
+import { useMediaQuery } from "@mui/material";
+import Dimensions from "../others/Dimensions";
 
 const CategoryCard = ({ item }) => {
 
 	const [favourite, setFavourite] = useState(false);
 	const navigate = useNavigate();
+	const medium = Dimensions.medium();
 
-	const AddToCart = async () => {
+	const ItemDetails = async () => {
 		navigate("/itemdetails");
 	}
 
-	const AddToFavourite = async () => {
+	const AddToFavourite = async (event) => {
+		event.stopPropagation();
 		favourite ? setFavourite(false) : setFavourite(true);
 	}
 
 	return (
-		<div className="w-[290px] border-[black] border-[0px] flex flex-col items-center justify-start gap-[15px]">
-			<div className="w-full h-auto bg-white rounded-[6px] p-[10px] flex flex-col items-start justify-start border-[#D9D9D9] border-[2px] gap-[5px]">
-				<div className="w-[100%] h-[15dvw] border-[#D9D9D9] border-[1px] flex items-center justify-center rounded-[8px] overflow-hidden relative">
+		<div className="md:w-[290px] w-[40dvw] border-[black] border-[0px] flex flex-col items-center justify-start gap-[15px] cursor-pointer"
+			onClick={ItemDetails}
+		>
+			<div className="w-full h-auto bg-white rounded-[6px] p-[10px] flex flex-col items-start justify-start border-[#D9D9D9] border-[2px] md:gap-[5px]">
+				<div className="w-[100%] md:h-[15dvw] h-[35dvw] border-[#D9D9D9] border-[1px] flex items-center justify-center rounded-[8px] overflow-hidden relative">
 					{item?.imageurl
 						?
 						<img src={item?.imageurl} className="max-h-[100%]" />
@@ -26,50 +33,50 @@ const CategoryCard = ({ item }) => {
 						<Image />
 					}
 					<div
-						className="border-[rgba(0,0,0,0.5)] border-[1px] absolute bottom-[5px] right-[5px] cursor-pointer rounded-[50%] shadow-[0px_0px_4px_rgba(0,0,0,0.2)] p-[2px] scale-[0.9]"
+						className="border-[rgba(0,0,0,0.5)] border-[0px] absolute bottom-[5px] right-[5px] cursor-pointer rounded-[50%] shadow-[0px_0px_0px_rgba(0,0,0,0.2)] p-[2px] scale-[0.9]"
 						onClick={AddToFavourite}
 					>
 						{favourite ?
-							<FavoriteOutlined />
+							<FavoriteOutlined className="text-[red] animate__animated animate__rubberBand" style={{ fontSize: medium ? "5dvw" : "160%" }} />
 							:
-							<FavoriteBorderOutlined />
+							<FavoriteBorderOutlined style={{ fontSize: medium ? "5dvw" : "160%" }} />
 
 						}
 					</div>
 
 				</div>
-				<p className="text-[150%] text-[#262626]">{item?.name ? item?.name : "Name"}</p>
-				<p className="text-[#686363]">
+				<p className="md:text-[150%] text-[3dvw] text-[#262626]">{item?.name ? item?.name : "Name"}</p>
+				<p className="text-[#686363] md:text-[100%] text-[2.5dvw]">
 					{item?.Units_Box ? item?.Units_Box : "XX"} Pcs/Box, {item?.Box_Carton ? item?.Box_Carton : "XX"} Box/Carton
 				</p>
 				<div className="w-full h-auto flex flex-row items-center justify-between">
 					<div className="w-auto h-auto flex flex-row items-center justify-between gap-[10px]">
-						<p className="text-[#686363] line-through">
+						<p className="text-[#686363] line-through md:text-[100%] text-[3.5dvw]">
 							&#x20B9;{item?.Price ? item?.Price : "XXX"}
 						</p>
-						<p className="text-[#133DF6] font-bold">3% off</p>
+						<p className="text-[#133DF6] font-bold md:text-[100%] text-[2.5dvw]">3% off</p>
 					</div>
-					<div className="w-auto h-auto flex items-center justify-center gap-[2px] px-[5px] bg-[#133DF6] text-[white] scale-[90%] rounded-md">
+					<div className="w-auto h-auto flex items-center justify-center gap-[2px] px-[5px] bg-[#133DF6] text-[white] scale-[90%] rounded-md md:text-[100%] text-[3dvw]">
 						<p>4.5</p>
-						<Star className="scale-[90%]" />
+						<Star className="scale-[90%]" style={{ fontSize: medium ? "4dvw" : "100%" }} />
 					</div>
 				</div>
 				<div className="w-auto h-auto flex flex-row items-center justify-between gap-[10px]">
-					<p className="text-[160%] font-bold text-[#262626]">
+					<p className="md:text-[160%] text-[3.5dvw] font-bold text-[#262626]">
 						&#x20B9;{item?.OfferPrice ? item?.OfferPrice : "XX"}
 					</p>
-					<p className="font-bold opacity-[90%] scale-[90%]">
+					<p className="font-bold opacity-[90%] scale-[90%] md:text-[100%] text-[2.5dvw]">
 						@&#x20B9;{item?.UnitPrice ? item?.UnitPrice : "XX"}-per piece
 					</p>
 				</div>
 
-				<div
+				{/* <div
 					className=" bg-[#133df6] rounded-[20px] w-auto h-auto flex flex-row items-center justify-between gap-[15px] px-[35px] py-[5px] text-white m-auto cursor-pointer"
-					onClick={AddToCart}
+					onClick={ItemDetails}
 				>
-					{/* <ShoppingCart /> */}
+					<ShoppingCart />
 					<p className="font-bold">Add to Cart</p>
-				</div>
+				</div> */}
 			</div>
 		</div>
 	)
