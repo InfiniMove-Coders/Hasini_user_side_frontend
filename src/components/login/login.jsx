@@ -43,9 +43,7 @@ const Login = () => {
               >
                 Log In
               </button>
-              <p className="forgotPassword">
-                <a href="#">Forgot Password?</a>
-              </p>
+                <a href="#" className="forgotPassword">Forgot Password?</a>
             </div>
           </form>
           <p className="createAccount">

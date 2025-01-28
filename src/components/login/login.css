@@ -117,13 +117,14 @@
     text-align: left;
     color: #db4444;
   }
-  
   .buttonWrapper {
     display: flex;
     margin-top: 15px;
-    justify-content: space-between;
+    justify-content: flex-start; /* Align items to the left */
     align-items: center;
+    gap: 15px; /* Add spacing between button and text */
   }
+  
   
   .createNowLink {
     color: #0066ff;
