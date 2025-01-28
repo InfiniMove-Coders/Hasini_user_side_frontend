@@ -10,6 +10,7 @@ import CategoryResponsive from "../components/categoryDetails/CategoryResponsive
 import Orders from "../components/orders/Orders"
 import Cancellations from "../components/cancellations/Cancellations"
 import Dimensions from "../components/others/Dimensions"
+import Login from "../components/login/login"
 
 const IndexRouter = () => {
 
@@ -31,6 +32,7 @@ const IndexRouter = () => {
 			<Route path="contact" element={<ContactForm />} />
 			<Route path="Loading" element={<Loading />} />
 			<Route path="*" element={<NotFound />} />
+			<Route path='login' element={<Login />} />
 		</Routes>
 	)
 }
