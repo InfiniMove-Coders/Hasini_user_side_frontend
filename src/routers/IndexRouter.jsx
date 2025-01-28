@@ -20,12 +20,12 @@ const IndexRouter = () => {
 
 	return (
 		<Routes>
-			<Route path="/" element={<SplashScreen/>} />	
-			<Route path="home" element={<Home />} />
+			<Route path="/" element={<Home />} />
+			{/* <Route path="home" element={<Home />} /> */}
 			<Route path="category" element={<Category />} />
 			{medium &&
 				<>
-					<Route path="categories" element={<CategoryResponsive/>} />
+					<Route path="categories" element={<CategoryResponsive />} />
 					<Route path="orders" element={<Orders />} />
 					<Route path="cancellations" element={<Cancellations />} />
 				</>
