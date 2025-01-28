@@ -32,9 +32,9 @@ const IndexRouter = () => {
 			<Route path="account" element={<Account />} />
 			<Route path="contact" element={<ContactForm />} />
 			<Route path="Loading" element={<Loading />} />
-			<Route path="*" element={<NotFound />} />
 			<Route path='login' element={<Login />} />
 			<Route path='signup' element={<Signup />} />
+			<Route path="*" element={<NotFound />} />
 		</Routes>
 	)
 }

@@ -8,11 +8,11 @@ const Login = () => {
 	const [isAnimating, setIsAnimating] = useState(false);
 
 	const handleLogin = () => {
-		setIsAnimating(true);
+		/* setIsAnimating(true); */
 
-		setTimeout(() => {
-			window.location.href = "/loading-page";
-		}, 8000);
+		/* setTimeout(() => {
+			window.location.href = "/Loading";
+		}, 8000); */
 	};
 
 	return (
