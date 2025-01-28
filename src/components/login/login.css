@@ -1,0 +1,143 @@
+.container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-right: 2px solid #133df680;
+  }
+  
+  .right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image {
+    max-width: 250px;
+  }
+  
+  .formContainer {
+    text-align: left;
+    max-width: 400px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  h2 {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  p.subheading {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  .input {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 10px 0;
+    width: 100%;
+    margin-bottom: 16px;
+    background-color: transparent;
+    outline: none;
+  }
+  
+  .input:focus {
+    border-bottom: 2px solid #0066ff;
+  }
+  
+  .input::placeholder {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #aaa;
+  }
+  
+  .button {
+    background-color: #133df6;
+    color: white;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    width: 120px !important;
+    height: 48px;
+    transition: all 0.3s ease;
+    display: inline-block; /* or block depending on the layout */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    
+  }
+  
+  
+  .button:hover {
+    background-color: #0052cc;
+    transform: scale(1.05);
+  }
+  
+  .button:active {
+    transform: scale(0.95);
+  }
+  
+  .forgotPassword {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #db4444;
+  }
+  
+  .buttonWrapper {
+    display: flex;
+    margin-top: 15px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .createNowLink {
+    color: #0066ff;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  
+  .createAccount {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #db4444;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
