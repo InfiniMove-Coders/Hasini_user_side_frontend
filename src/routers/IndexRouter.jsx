@@ -6,6 +6,8 @@ import ContactForm from "../components/Contact/ContactUS"
 import Loading from "../components/Loading/Loading"
 import Account from "../components/MyAccount/Account"
 import Category from "../components/categoryDetails/Category"
+import AboutPage from "../components/about/about"
+import Login from "../components/login/login"
 
 const IndexRouter = () => {
 	return (
@@ -16,6 +18,8 @@ const IndexRouter = () => {
 			<Route path="account" element={<Account />} />
 			<Route path="contact" element={<ContactForm />} />
 			<Route path="Loading" element={<Loading />} />
+			<Route path="about" element={<AboutPage />} />
+			<Route path="login" element={<Login />} />
 			<Route path="*" element={<NotFound />} />
 		</Routes>
 	)
