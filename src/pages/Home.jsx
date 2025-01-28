@@ -8,6 +8,7 @@ import Carousel from '../components/carousel/Carousel';
 import Navbar1 from '../components/navbar/Navbar1';
 import Navbar2 from '../components/navbar/Navbar2';
 import Navbar3 from '../components/navbar/Navbar3';
+import SplashScreen from '../components/splash screen/Splash';
 
 const Home = () => {
 
@@ -17,6 +18,7 @@ const Home = () => {
 
 	return (
 		<div>
+			<SplashScreen />
 			<div className='w-[100%] h-auto fixed top-[0px] z-[5]'>
 				<Navbar1 />
 				<Navbar2 />
