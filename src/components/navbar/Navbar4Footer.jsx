@@ -20,7 +20,7 @@ const Navbar4Footer = () => {
 		else if (location.pathname == "/cart") {
 			setKeyStatus(2);
 		}
-		else if (location.pathname == "/account") {
+		else if (["/account", "/orders", "/cancellations"].includes(location.pathname)) {
 			setKeyStatus(3)
 		}
 	}, [location.pathname])

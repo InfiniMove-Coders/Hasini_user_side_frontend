@@ -159,12 +159,12 @@ const OrderCard = () => {
 						<div className="flex flex-row items-center justify-between gap-[2px]">
 							{
 								Array.from(Array(rating).keys()).map((v, k) => {
-									return <Star style={{ fontSize: medium ? "4dvw" : "100%", cursor: "pointer", }} onClick={() => setRating(k + 1)} />
+									return <Star style={{ fontSize: medium ? "4dvw" : "160%", cursor: "pointer", }} onClick={() => setRating(k + 1)} />
 								})
 							}
 							{
 								Array.from(Array(5 - rating).keys()).map((v, k) => {
-									return <StarBorderSharp style={{ fontSize: medium ? "4dvw" : "100%", cursor: "pointer", }} onClick={() => setRating(rating + k + 1)} />
+									return <StarBorderSharp style={{ fontSize: medium ? "4dvw" : "160%", cursor: "pointer", }} onClick={() => setRating(rating + k + 1)} />
 								})
 							}
 						</div>
@@ -221,28 +221,28 @@ const OrderCard = () => {
 						<div className="w-auto h-auto flex flex-col items-start justify-start md:gap-[10px] gap-[1dvw] relative">
 							<div className="absolute h-[100%] border-[#FFAD33] border-l-[2px] top-[0px] bottom-0 md:left-[13px] left-[2dvw]"></div>
 							<div className="w-auto h-auto flex flex-row items-start justify-start gap-[15px] font-[500] text-[85%] border-[0px] border-[black]">
-								<TaskAlt className="scale-[90%] rounded-[50%]" style={{ backgroundColor: true ? "#FFAD33" : "white", fontSize: medium ? "3.5dvw" : "100%", }} />
+								<TaskAlt className="scale-[90%] rounded-[50%]" style={{ backgroundColor: true ? "#FFAD33" : "white", fontSize: medium ? "3.5dvw" : "160%", }} />
 								<div className="w-auto h-auto border-[0px] border-[black] flex flex-col items-start justify-start gap-[0px] md:text-[100%] text-[2dvw]">
 									<p>Order Confirmed</p>
 									<p>- Sun Dec 15</p>
 								</div>
 							</div>
 							<div className="w-auto h-auto flex flex-row items-start justify-start gap-[15px] font-[500] text-[85%] border-[0px] border-[black]">
-								<TaskAlt className="scale-[90%] rounded-[50%]" style={{ backgroundColor: true ? "#FFAD33" : "white", fontSize: medium ? "3.5dvw" : "100%", }} />
+								<TaskAlt className="scale-[90%] rounded-[50%]" style={{ backgroundColor: true ? "#FFAD33" : "white", fontSize: medium ? "3.5dvw" : "160%", }} />
 								<div className="w-auto h-auto border-[0px] border-[black] flex flex-col items-start justify-start gap-[0px] md:text-[100%] text-[2dvw]">
 									<p>Order Dispatched</p>
 									<p>- Mon Dec 16</p>
 								</div>
 							</div>
 							<div className="w-auto h-auto flex flex-row items-start justify-start gap-[15px] font-[500] text-[85%] border-[0px] border-[black]">
-								<TaskAlt className="scale-[90%] rounded-[50%]" style={{ backgroundColor: false ? "#FFAD33" : "white", fontSize: medium ? "3.5dvw" : "100%", }} />
+								<TaskAlt className="scale-[90%] rounded-[50%]" style={{ backgroundColor: false ? "#FFAD33" : "white", fontSize: medium ? "3.5dvw" : "160%", }} />
 								<div className="w-auto h-auto border-[0px] border-[black] flex flex-col items-start justify-start gap-[0px] md:text-[100%] text-[2dvw]">
 									<p>Order Will be Shipped by</p>
 									<p>- Tue Dec 17</p>
 								</div>
 							</div>
 							<div className="w-auto h-auto flex flex-row items-start justify-start gap-[15px] font-[500] text-[85%] border-[0px] border-[black]">
-								<TaskAlt className="scale-[90%] rounded-[50%]" style={{ backgroundColor: false ? "#FFAD33" : "white", fontSize: medium ? "3.5dvw" : "100%", }} />
+								<TaskAlt className="scale-[90%] rounded-[50%]" style={{ backgroundColor: false ? "#FFAD33" : "white", fontSize: medium ? "3.5dvw" : "160%", }} />
 								<div className="w-auto h-auto border-[0px] border-[black] flex flex-col items-start justify-start gap-[0px] md:text-[100%] text-[2dvw]">
 									<p>Order Will be Delivered by </p>
 									<p>- Wed Dec 18</p>
