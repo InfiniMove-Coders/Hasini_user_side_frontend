@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom"
+import Dimensions from "../components/others/Dimensions"
 import Home from "../pages/Home"
 import NotFound from "../pages/NotFound"
 import ItemDetails from "../components/ItemDetails/ItemDetails"
@@ -6,10 +7,10 @@ import ContactForm from "../components/Contact/ContactUS"
 import Loading from "../components/Loading/Loading"
 import Account from "../components/MyAccount/Account"
 import Category from "../components/categoryDetails/Category"
+import SplashScreen from "../components/splash screen/Splash"
 import CategoryResponsive from "../components/categoryDetails/CategoryResponsive"
 import Orders from "../components/orders/Orders"
 import Cancellations from "../components/cancellations/Cancellations"
-import Dimensions from "../components/others/Dimensions"
 import Login from "../components/login/login"
 import Signup from "../components/signup/signup"
 
@@ -19,11 +20,12 @@ const IndexRouter = () => {
 
 	return (
 		<Routes>
-			<Route path="" element={<Home />} />
+			<Route path="/" element={<SplashScreen/>} />	
+			<Route path="home" element={<Home />} />
 			<Route path="category" element={<Category />} />
 			{medium &&
 				<>
-					<Route path="categories" element={<CategoryResponsive />} />
+					<Route path="categories" element={<CategoryResponsive/>} />
 					<Route path="orders" element={<Orders />} />
 					<Route path="cancellations" element={<Cancellations />} />
 				</>

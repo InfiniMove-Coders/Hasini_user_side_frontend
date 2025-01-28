@@ -30,18 +30,18 @@ const Category3 = () => {
         <h2 className="text-white text-2xl font-bold text-center mb-8">
           OUR GENUINITY
         </h2>
-        <div className="flex flex-wrap justify-between items-center gap-4">
+        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 gap-4 sm:gap-2 md:gap-4">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-white"
+              className={`flex flex-col items-center text-white`}
             >
-              <img 
+              <img
                 src={feature.imageSrc}
                 alt={feature.title}
-                className="w-22 h-20 mb-3 object-contain"
+                className="w-16 h-16 mb-3 object-contain sm:w-14 sm:h-14"
               />
-              <span className="text-sm text-center whitespace-nowrap">
+              <span className="text-xs text-center sm:text-sm whitespace-nowrap">
                 {feature.title}
               </span>
             </div>
