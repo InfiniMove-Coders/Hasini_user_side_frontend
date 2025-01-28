@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState,useEffect } from 'react';
 import Category1 from '../components/Categories/Category1';
 import Category2 from '../components/Categories/Category2';
 import Category3 from '../components/Categories/Category3';
@@ -8,8 +9,10 @@ import Carousel from '../components/carousel/Carousel';
 import Navbar1 from '../components/navbar/Navbar1';
 import Navbar2 from '../components/navbar/Navbar2';
 import Navbar3 from '../components/navbar/Navbar3';
+import SplashScreen from '../components/splash screen/Splash';
 
 const Home = () => {
+
 	return (
 		<div>
 			<Navbar1 />

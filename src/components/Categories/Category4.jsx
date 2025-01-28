@@ -1,31 +1,57 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Category4 = () => {
+  const navigate = useNavigate();
+  const handleCardClick = () => {
+    navigate('/category');
+  };
+
   return (
-    <div className="w-full min-h-screen bg-gray-100 p-4">
+    <div className="w-full min-h-screen bg-gray-100 p-2 md:p-4">
       <div className="w-full space-y-4">
-        <div className="grid grid-cols-2 gap-4">
-          <div className="h-[276px] rounded-lg overflow-hidden">
-            <img 
-              src="/images/carousel/d.png" 
+        {/* First Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {/* Banner */}
+          <div className="h-auto rounded-lg overflow-hidden flex flex-col">
+            <img
+              src="/images/carousel/d.png"
               alt="Flash Sale Banner"
               className="w-full h-full object-cover"
+              style={{ maxHeight: "280px" }}
             />
           </div>
 
-          <div className="bg-white p-8 rounded-lg shadow-lg">
-            <h2 className="text-blue-600 text-4xl font-bold mb-6 text-center">Shop Now !</h2>
-            <div className="grid grid-cols-3 gap-6">
-              {['Dairy Melts', 'Klassik cocoa', 'Dark & White'].map((product) => (
-                <div key={product} className="flex h-36 flex-col bg-blue-600 rounded-lg overflow-hidden">
-                  <div className="p-4 text-white text-lg text-center mb-7">
+          {/* Buttons Section */}
+          <div className="bg-white p-4 md:p-8 rounded-lg shadow-lg flex flex-col justify-between md:min-h-[200px]">
+            <h2 className="text-blue-600 text-2xl md:text-4xl font-bold mb-4 text-center">
+              Shop Now!
+            </h2>
+            <div className="grid grid-cols-3 gap-2 md:gap-6">
+              {['Dairy Melts', 'Klassik Cocoa', 'Dark & White'].map((product) => (
+                <div
+                  key={product}
+                  className="flex h-40 md:h-42 flex-col justify-between bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl p-3"
+                >
+                  <div className="text-white text-xl md:text-lg lg:text-3xl font-medium text-center">
                     {product}
                   </div>
-                  <button className="w-24 mx-auto bg-blue-600 hover:bg-blue-800 border border-white transition-colors text-white py-2 px-4 flex items-center justify-center">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                  <button className="w-full bg-transparent hover:bg-blue-700 border-2 border-white rounded-full transition-colors text-white py-1 px-2 flex items-center justify-center gap-1"
+                  onClick={handleCardClick}>
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                      />
                     </svg>
-                    <span className="ml-2">Add</span>
+                    Add
                   </button>
                 </div>
               ))}
@@ -33,36 +59,55 @@ const Category4 = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
-          <div className="bg-white p-8 rounded-lg shadow-lg">
-            <h2 className="text-blue-600 text-4xl font-bold mb-6 text-center">Add to Your Cart</h2>
-            <div className="grid grid-cols-3 gap-6">
+        {/* Second Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {/* Banner */}
+          <div className="h-auto rounded-lg overflow-hidden flex flex-col order-1 md:order-2">
+            <img
+              src="/images/carousel/c.png"
+              alt="Mega Offer Banner"
+              className="w-full h-full object-cover"
+              style={{ maxHeight: "280px" }}
+            />
+          </div>
+
+          <div className="bg-white p-4 md:p-8 rounded-lg shadow-lg flex flex-col justify-between order-2 md:order-1 md:min-h-[200px]">
+            <h2 className="text-blue-600 text-2xl md:text-3xl font-bold mb-4 text-center">
+              Add to Your Cart
+            </h2>
+            <div className="grid grid-cols-3 gap-2 md:gap-6">
               {[
                 'Blueberry Butter Combo',
-                'Butter-scotch & Vanilla',
-                'Choco- Vanilla Combo'
+                'Butter-scotch& Vanilla',
+                'Choco- Vanilla Combo',
               ].map((product) => (
-                <div key={product} className="flex h-36 flex-col bg-blue-600 rounded-lg overflow-hidden">
-                  <div className="p-4 text-white text-lg text-center">
+                <div
+                  key={product}
+                  className="flex h-40 md:h-42 flex-col justify-between bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl p-5"
+                >
+                  <div className="text-white text-xl md:text-lg lg:text-2xl font-medium text-center">
                     {product}
                   </div>
-                  <button className="w-24 mx-auto bg-blue-600 hover:bg-blue-800 transition-colors text-white py-2 px-4 flex items-center justify-center border border-white">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                  <button className="w-full bg-transparent hover:bg-purple-700 border-2 border-white rounded-full transition-colors text-white py-1 px-2 flex items-center justify-center gap-1"
+                  onClick={handleCardClick}>
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                      />
                     </svg>
-                    <span className="ml-2">Add</span>
+                    Add
                   </button>
                 </div>
               ))}
             </div>
-          </div>
-
-          <div className="h-[276px] rounded-lg overflow-hidden">
-            <img 
-              src="/images/carousel/c.png" 
-              alt="Mega Offer Banner"
-              className="w-full h-full object-cover"
-            />
           </div>
         </div>
       </div>

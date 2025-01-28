@@ -1,5 +1,5 @@
-import React from 'react';
-import { Heart, ChevronRight } from 'lucide-react';
+import React, { useState } from 'react';
+import { ChevronRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const ProductCard = ({
@@ -13,55 +13,69 @@ const ProductCard = ({
   pricePerPiece,
   rating,
 }) => {
+  const [favourite, setFavourite] = useState(false);
   const navigate = useNavigate();
 
-  const handleAddToCart = () => {
-    console.log(`Adding ${id} to cart`);
-    navigate('/itemdetails');
+  const handleCardClick = () => {
+    navigate('/itemdetails', { state: { product: { id, name, imagesrc, packageInfo, originalPrice, discountPercentage, finalPrice, pricePerPiece, rating } } });
+  };  
+
+  const handleToggleFavourite = (e) => {
+    e.stopPropagation();
+    setFavourite(!favourite);
   };
 
-  const handleToggleWishlist = () => {
-    console.log(`Toggling wishlist for ${id}`);
-  };
   return (
-    <div className="w-64 p-4 bg-white rounded-lg shadow-md border border-gray-200 flex-shrink-0">
-
-      <div className="relative mb-4">
-        <img src={imagesrc} alt={name} className="w-full h-48 object-contain" />
-        <button
-          className="absolute top-2 right-2 text-gray-400 hover:text-gray-600"
-          onClick={() => onToggleWishlist(id)}
-        >
-          <Heart className="w-6 h-6" />
-        </button>
-      </div>
-
-      <div className="space-y-2">
-        <h2 className="text-xl font-semibold">{name}</h2>
-        <p className="text-sm text-gray-600">{packageInfo}</p>
-
-        <div className="flex items-center space-x-2 mt-2">
-          <span className="text-gray-400 line-through">₹{originalPrice}</span>
-          <span className="text-blue-600 font-medium">{discountPercentage}% off</span>
+    <div className="w-64 flex-shrink-0">
+      <div 
+        className="bg-white rounded-lg p-3 flex flex-col items-start justify-start border-2 border-[#D9D9D9] gap-1 cursor-pointer hover:shadow-lg transition-shadow"
+        onClick={handleCardClick}
+      >
+        <div className="relative w-full h-48 border border-[#D9D9D9] flex items-center justify-center rounded-lg overflow-hidden">
+          <img 
+            src={imagesrc} 
+            alt={name} 
+            className="max-h-full object-contain"
+          />
+          <button
+            className="absolute bottom-1 right-1 border border-[rgba(0,0,0,0.5)] rounded-full shadow-[0px_0px_4px_rgba(0,0,0,0.2)] p-0.5 scale-90 bg-white cursor-pointer"
+            onClick={handleToggleFavourite}
+          >
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              className="w-6 h-6" 
+              fill={favourite ? "red" : "none"}
+              viewBox="0 0 24 24" 
+              stroke={favourite ? "red" : "gray"}
+              strokeWidth="2"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" 
+              />
+            </svg>
+          </button>
         </div>
 
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <span className="text-xl font-bold">₹{finalPrice}</span>
-            <span className="text-sm text-gray-500">@₹{pricePerPiece}-per piece</span>
+        <h2 className="text-xl text-[#262626]">{name}</h2>
+        <p className="text-[#686363]">{packageInfo}</p>
+
+        <div className="w-full flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <span className="text-[#686363] line-through">₹{originalPrice}</span>
+            <span className="text-[#133DF6] font-bold">{discountPercentage}% off</span>
           </div>
-          <div className="flex items-center">
-            <span className="text-blue-600 font-bold">{rating}</span>
-            <span className="text-yellow-400 ml-1">★</span>
+          <div className="flex items-center px-2 bg-[#133DF6] text-white scale-90 rounded-md">
+            <span>{rating}</span>
+            <span className="ml-0.5 scale-90">★</span>
           </div>
         </div>
 
-        <button
-          className="w-full py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors mt-4"
-          onClick={handleAddToCart}
-        >
-          Add to Cart
-        </button>
+        <div className="flex items-center gap-3">
+          <span className="text-2xl font-bold text-[#262626]">₹{finalPrice}</span>
+          <span className="font-bold opacity-90 scale-90">@₹{pricePerPiece}-per piece</span>
+        </div>
       </div>
     </div>
   );
@@ -167,9 +181,9 @@ const Category1 = () => {
   const handleViewMore = () => {
     navigate('/category');
   };
+
   return (
     <div className="max-w-7xl mx-auto p-6">
-
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-2xl font-semibold text-gray-800">Chocolates</h2>
       </div>
@@ -180,18 +194,19 @@ const Category1 = () => {
         ))}
 
         {products.length > 7 && (
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center flex-shrink-0">
             <button
-              className="w-14 h-14 rounded-full bg-blue-600 flex items-center justify-center text-white hover:bg-blue-700 transition-colors shadow-md"
+              className="w-14 h-14 rounded-full bg-[#133DF6] flex items-center justify-center text-white hover:bg-blue-700 transition-colors shadow-md"
               onClick={handleViewMore}
             >
               <ChevronRight className="w-6 h-6" />
             </button>
-            <span className="text-blue-600 font-medium mt-2">View More</span>
+            <span className="text-[#133DF6] font-medium mt-2">View More</span>
           </div>
         )}
       </div>
     </div>
   );
 };
+
 export default Category1;
