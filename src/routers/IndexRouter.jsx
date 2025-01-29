@@ -13,6 +13,7 @@ import Orders from "../components/orders/Orders"
 import Cancellations from "../components/cancellations/Cancellations"
 import Login from "../components/login/login"
 import Signup from "../components/signup/signup"
+import Cart from "../components/cart/cart"
 
 const IndexRouter = () => {
 
@@ -36,6 +37,7 @@ const IndexRouter = () => {
 			<Route path="Loading" element={<Loading />} />
 			<Route path='login' element={<Login />} />
 			<Route path='signup' element={<Signup />} />
+			<Route path='cart' element={<Cart />} />
 			<Route path="*" element={<NotFound />} />
 		</Routes>
 	)
