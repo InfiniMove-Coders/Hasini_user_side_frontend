@@ -63,13 +63,13 @@ const ItemDetails = () => {
 				<Navbar1 />
 				<Navbar2 />
 			</div>
-			<p className="md:px-[100px] px-[10dvw] pt-[30px] md:mt-[130px] mt-[35dvw] md:text-[100%] text-[3dvw]" >
-				<span className="opacity-[0.5]"
+			<p className="md:px-[100px] px-[10dvw] pt-[30px] md:mt-[130px] mt-[35dvw] md:text-[100%] text-[3.5dvw]" >
+				<span className="opacity-[0.5] cursor-pointer"
 					onClick={() => {
 						navigate("/ ", { replace: true });
 					}}
 				>Home /</span>
-				<span className="opacity-[0.5]"
+				<span className="opacity-[0.5] cursor-pointer"
 					onClick={() => {
 						navigate("/category", { state: { keyStatusState: 0 }, replace: true });
 					}}

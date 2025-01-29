@@ -20,7 +20,7 @@ const Carousel = () => {
 
 	return (
 		<>
-			<div className="w-[100%] h-auto border-[0px] border-[black] md:mt-[200px] mt-[36dvw]">
+			<div className="w-[100%] h-auto border-[0px] border-[black] md:mt-[200px] mt-[37dvw]">
 				<Swiper
 					effect="coverflow"
 					grabCursor={true}

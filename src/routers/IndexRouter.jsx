@@ -14,7 +14,7 @@ import Cancellations from "../components/cancellations/Cancellations"
 import Login from "../components/login/login"
 import Signup from "../components/signup/signup"
 import Cart from "../components/cart/cart"
-import Favourite from "../components/favourites/Favourite"
+import Favourite from "../components/favourite/Favourite"
 
 const IndexRouter = () => {
 
@@ -34,6 +34,7 @@ const IndexRouter = () => {
 			}
 			<Route path="itemdetails" element={<ItemDetails />} />
 			<Route path="account" element={<Account />} />
+			<Route path="favourite" element={<Favourite />} />
 			<Route path="contact" element={<ContactForm />} />
 			<Route path="Loading" element={<Loading />} />
 			<Route path='login' element={<Login />} />
