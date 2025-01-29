@@ -1,28 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 import "./login.css";
 import Navbar1 from "../navbar/Navbar1";
 import Navbar2 from "../navbar/Navbar2";
 import Footer from "../footer/footer";
 
 const Login = () => {
-	const [isAnimating, setIsAnimating] = useState(false);
-
-	const handleLogin = () => {
-		/* setIsAnimating(true); */
-
-		/* setTimeout(() => {
-			window.location.href = "/Loading";
-		}, 8000); */
-	};
-
 	return (
 		<>
+			{/* Navbar Section */}
 			<div className="w-[100%] h-auto fixed top-[0px] z-[5]">
 				<Navbar1 />
 				<Navbar2 />
 			</div>
+
+			{/* Main Container */}
 			<div className="container">
-				{/* Left Section */}
+				{/* Left Section - Shopping Cart Image */}
 				<div className="left">
 					<img
 						src="src/assets/images/ganesh/shopping-cart-NbZTs86IlT.png"
@@ -31,9 +24,9 @@ const Login = () => {
 					/>
 				</div>
 
-				{/* Right Section */}
+				{/* Right Section - Login Form */}
 				<div className="right">
-					<div className={`formContainer ${isAnimating ? "hidden" : ""}`}>
+					<div className="formContainer">
 						<h2>Log in to Shop Now</h2>
 						<p className="subheading">Enter your details below</p>
 						<form className="form">
@@ -44,20 +37,16 @@ const Login = () => {
 							/>
 							<input type="password" placeholder="Password" className="input" />
 							<div className="buttonWrapper">
-								<button
-									type="button"
-									className="button"
-									onClick={handleLogin}
-								>
+								<button type="button" className="button">
 									Log In
 								</button>
-								<p className="forgotPassword">
-									<a href="#">Forgot Password?</a>
-								</p>
+								<a href="#" className="forgotPassword">
+									Forgot Password?
+								</a>
 							</div>
 						</form>
 						<p className="createAccount">
-							Don’t have an account,{" "}
+							Don’t have an account?{" "}
 							<a href="#" className="createNowLink">
 								Create Now
 							</a>
@@ -65,6 +54,8 @@ const Login = () => {
 					</div>
 				</div>
 			</div>
+
+			{/* Footer Section */}
 			<Footer />
 		</>
 	);
