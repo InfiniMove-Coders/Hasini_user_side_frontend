@@ -35,8 +35,8 @@ const Navbar4Footer = () => {
 						navigate("/");
 					}}
 				>
-					<HomeOutlined style={{ fontSize: "8dvw", borderRadius: "50%", padding: keyStatus == 0 ? "1px" : "0px", backgroundColor: keyStatus == 0 ? "#133DF6" : "white", color: keyStatus == 0 ? "white" : "black" }} />
-					<p className="text-[80%]">Home</p>
+					<HomeOutlined sx={{ strokeWidth: keyStatus == 0 ? 0.1 : 0.5, stroke: "white" }} style={{ fontSize: "8dvw", borderRadius: "50%", padding: keyStatus == 0 ? "1px" : "0px", backgroundColor: keyStatus == 0 ? "#133DF6" : "white", color: keyStatus == 0 ? "white" : "black" }} />
+					<p className="text-[2.5dvw]" style={{ color: keyStatus == 0 ? "#133DF6" : "black" }}>HOME</p>
 				</div>
 				<div
 					className="w-auto h-[100%] flex flex-col items-center justify-between gap-[0px]"
@@ -45,8 +45,8 @@ const Navbar4Footer = () => {
 						navigate("/categories");
 					}}
 				>
-					<GridView style={{ fontSize: "8dvw", borderRadius: "50%", padding: keyStatus == 1 ? "3px" : "0px", backgroundColor: keyStatus == 1 ? "#133DF6" : "white", color: keyStatus == 1 ? "white" : "black" }} />
-					<p className="text-[80%]">CATEGORIES</p>
+					<GridView sx={{ strokeWidth: keyStatus == 1 ? 0.1 : 0.5, stroke: "white" }} style={{ fontSize: "8dvw", borderRadius: "50%", padding: keyStatus == 1 ? "3px" : "0px", backgroundColor: keyStatus == 1 ? "#133DF6" : "white", color: keyStatus == 1 ? "white" : "black" }} />
+					<p className="text-[2.5dvw]" style={{ color: keyStatus == 1 ? "#133DF6" : "black" }}>CATEGORIES</p>
 				</div>
 				<div
 					className="w-auto h-[100%] flex flex-col items-center justify-between gap-[0px]"
@@ -55,8 +55,8 @@ const Navbar4Footer = () => {
 						navigate("/cart");
 					}}
 				>
-					<ShoppingCartOutlined style={{ fontSize: "8dvw", borderRadius: "50%", padding: keyStatus == 2 ? "3px" : "0px", backgroundColor: keyStatus == 2 ? "#133DF6" : "white", color: keyStatus == 2 ? "white" : "black" }} />
-					<p className="text-[80%]">CART</p>
+					<ShoppingCartOutlined sx={{ strokeWidth: keyStatus == 2 ? 0.1 : 0.5, stroke: "white" }} style={{ fontSize: "8dvw", borderRadius: "50%", padding: keyStatus == 2 ? "3px" : "0px", backgroundColor: keyStatus == 2 ? "#133DF6" : "white", color: keyStatus == 2 ? "white" : "black" }} />
+					<p className="text-[2.5dvw]" style={{ color: keyStatus == 2 ? "#133DF6" : "black" }}>CART</p>
 				</div>
 				<div
 					className="w-auto h-[100%] flex flex-col items-center justify-between gap-[0px]"
@@ -65,8 +65,8 @@ const Navbar4Footer = () => {
 						navigate("/account");
 					}}
 				>
-					<Person2Outlined style={{ fontSize: "8dvw", borderRadius: "50%", padding: keyStatus == 3 ? "1px" : "0px", backgroundColor: keyStatus == 3 ? "#133DF6" : "white", color: keyStatus == 3 ? "white" : "black" }} />
-					<p className="text-[80%]">ACCOUNT</p>
+					<Person2Outlined sx={{ strokeWidth: keyStatus == 3 ? 0.1 : 0.5, stroke: "white" }} style={{ fontSize: "8dvw", borderRadius: "50%", padding: keyStatus == 3 ? "1px" : "0px", backgroundColor: keyStatus == 3 ? "#133DF6" : "white", color: keyStatus == 3 ? "white" : "black" }} />
+					<p className="text-[2.5dvw]" style={{ color: keyStatus == 3 ? "#133DF6" : "black" }}>ACCOUNT</p>
 				</div>
 			</div>
 		</>

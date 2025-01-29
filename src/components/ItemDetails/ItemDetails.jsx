@@ -63,13 +63,13 @@ const ItemDetails = () => {
 				<Navbar1 />
 				<Navbar2 />
 			</div>
-			<p className="md:px-[100px] px-[10dvw] pt-[30px] md:mt-[130px] mt-[35dvw] md:text-[100%] text-[3dvw]" >
-				<span className="opacity-[0.5]"
+			<p className="md:px-[100px] px-[10dvw] pt-[30px] md:mt-[130px] mt-[35dvw] md:text-[100%] text-[3.5dvw]" >
+				<span className="opacity-[0.5] cursor-pointer"
 					onClick={() => {
 						navigate("/ ", { replace: true });
 					}}
 				>Home /</span>
-				<span className="opacity-[0.5]"
+				<span className="opacity-[0.5] cursor-pointer"
 					onClick={() => {
 						navigate("/category", { state: { keyStatusState: 0 }, replace: true });
 					}}
@@ -138,9 +138,9 @@ const ItemDetails = () => {
 				</div>
 			</div>
 			<div className="h-[1px] bg-[#133DF6] w-[70%] m-auto"></div>
-			<div className="md:mt-[40px] mt-[8dvw] md:mb-[40px] mb-[8dvw] w-full h-auto flex flex-col items-center justify-start gap-[40px] md:px-[60px] px-[8dvw]">
+			<div className="md:mt-[40px] mt-[8dvw] md:mb-[40px] mb-[8dvw] w-full h-auto flex flex-col items-center justify-start md:gap-[40px] gap-[10dvw] md:px-[60px] px-[4dvw]">
 				<p className="w-fit h-auto md:px-[100px] px-[10dvw] md:py-[3px] py-[1dvw] rounded-[25px] bg-[#4000FF] text-white md:text-[160%] text-[5dvw] font-bold">Similar Products</p>
-				<div className="w-full h-auto border-[black] border-[0px] relative z-[0]">
+				<div className="w-full h-auto border-[black] border-[0px] relative z-[0] hidden md:block">
 					<Swiper
 						grabCursor={false}
 						slidesPerView={medium ? 1.5 : 4}
@@ -183,7 +183,17 @@ const ItemDetails = () => {
 					<div className="custom-next"><ArrowForward /></div>
 
 				</div>
+				<div className="md:hidden flex flex-row items-start justify-evenly flex-wrap gap-[3dvw] w-[100%] h-auto border-[0px] border-[red]">
+					<ItemCard item={item} />
+					<ItemCard item={item} />
+					<ItemCard item={item} />
+					<ItemCard item={item} />
+					<ItemCard item={item} />
+					<ItemCard item={item} />
+					<ItemCard item={item} />
+				</div>
 			</div >
+
 			<Footer />
 		</>
 	)

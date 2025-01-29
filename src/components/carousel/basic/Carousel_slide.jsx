@@ -2,7 +2,7 @@
 
 const Carousel_slide = ({ image, onClick }) => {
 	return (
-		<div onClick={onClick} className="w-[100%] h-[40dvw] md:h-[500px] cursor-pointer border-[0px] border-[black] rounded-[20px] overflow-hidden">
+		<div onClick={onClick} className="w-[100%] h-[37dvw] md:h-[500px] cursor-pointer border-[0px] border-[black] rounded-[20px] overflow-hidden">
 			<img src={image} className="w-[100%] h-[100%] rouded-[20px]" />
 		</div>
 	)

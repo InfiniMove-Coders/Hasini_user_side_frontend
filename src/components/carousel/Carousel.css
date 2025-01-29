@@ -55,3 +55,13 @@
   border:none;
   outline:none;
 }
+
+@media only screen and (max-width:768px){
+  .custom-pagination {
+    gap: 1dvw;
+  }
+  .custom-pagination .swiper-pagination-bullet {
+    width: 2dvw;
+    height: 2dvw;
+  }
+}
