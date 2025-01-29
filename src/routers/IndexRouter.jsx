@@ -14,6 +14,7 @@ import Cancellations from "../components/cancellations/Cancellations"
 import Login from "../components/login/login"
 import Signup from "../components/signup/signup"
 import Cart from "../components/cart/cart"
+import Favourite from "../components/favourites/Favourite"
 
 const IndexRouter = () => {
 
