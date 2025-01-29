@@ -18,7 +18,7 @@ const Login = () => {
 				{/* Left Section - Shopping Cart Image */}
 				<div className="left">
 					<img
-						src="src/assets/images/ganesh/shopping-cart-NbZTs86IlT.png"
+						src="/images/ganesh/shopping-cart-NbZTs86IlT.png"
 						alt="Cart"
 						className="image"
 					/>

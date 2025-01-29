@@ -10,6 +10,7 @@ const Signup = () => {
   const navigate = useNavigate(); // ✅ Initialize navigation
 
   const handleSignup = () => {
+    return
     setIsAnimating(true);
 
     setTimeout(() => {
@@ -27,7 +28,7 @@ const Signup = () => {
         {/* Left Section */}
         <div className="left">
           <img
-            src="src/assets/images/ganesh/shopping-cart-NbZTs86IlT.png"
+            src="/images/ganesh/shopping-cart-NbZTs86IlT.png"
             alt="Cart"
             className="image"
           />
@@ -52,7 +53,7 @@ const Signup = () => {
 
               <button type="button" className="googleButton">
                 <img
-                  src="src/assets/images/ganesh/google.png"
+                  src="/images/ganesh/google.png"
                   alt="Google Icon"
                   className="googleIcon"
                 />
