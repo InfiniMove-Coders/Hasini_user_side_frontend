@@ -8,7 +8,7 @@ const Category4 = () => {
   };
 
   return (
-    <div className="w-full min-h-screen bg-gray-100 p-2 md:p-4">
+    <div className="w-full min-h-auto bg-gray-100 p-2 md:p-4">
       <div className="w-full space-y-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="h-auto rounded-lg overflow-hidden flex flex-col">
@@ -28,15 +28,15 @@ const Category4 = () => {
               {['Dairy Melts', 'Klassik Cocoa', 'Dark & White'].map((product) => (
                 <div
                   key={product}
-                  className="flex h-40 md:h-42 flex-col justify-between bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl p-3"
+                  className="flex h-auto lg:h-32 md:h-42 flex-col justify-between bg-gradient-to-r from-purple-900 to-blue-600 rounded-xl p-3"
                 >
-                  <div className="text-white text-xl md:text-lg lg:text-3xl font-medium text-center">
+                  <div className="text-white text-lg md:text-lg lg:text-3xl font-medium text-center">
                     {product}
                   </div>
-                  <button className="w-full bg-transparent hover:bg-blue-700 border-2 border-white rounded-full transition-colors text-white py-1 px-2 flex items-center justify-center gap-1"
+                  <button className="w-full lg:w-20 lg:ml-11 h-7 bg-transparent hover:bg-blue-700 border-2 border-white rounded-full transition-colors text-xs text-white py-1 px-2 flex items-center justify-center gap-1"
                   onClick={handleCardClick}>
                     <svg
-                      className="w-4 h-4"
+                      className="lg:w-4 lg:h-4 h-3 w-3"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -77,15 +77,15 @@ const Category4 = () => {
               ].map((product) => (
                 <div
                   key={product}
-                  className="flex h-40 md:h-42 flex-col justify-between bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl p-5"
+                  className="flex h-32 md:h-42 flex-col justify-between bg-gradient-to-r from-purple-900 to-blue-600 rounded-xl p-5"
                 >
-                  <div className="text-white text-xl md:text-lg lg:text-2xl font-medium text-center">
+                  <div className="text-white text-l md:text-lg lg:text-2xl font-medium text-center">
                     {product}
                   </div>
-                  <button className="w-full bg-transparent hover:bg-purple-700 border-2 border-white rounded-full transition-colors text-white py-1 px-2 flex items-center justify-center gap-1"
+                  <button className="w-full lg:w-20 lg:ml-11 h-7 bg-transparent hover:bg-purple-700 border-2 border-white rounded-full transition-colors text-xs text-white py-1 px-2 flex items-center justify-center gap-1"
                   onClick={handleCardClick}>
                     <svg
-                      className="w-4 h-4"
+                      className="lg:w-4 lg:h-4 h-3 w-3"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"

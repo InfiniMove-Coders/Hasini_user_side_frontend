@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-
 const ProductCard = ({
   id,
   name,
@@ -18,7 +17,7 @@ const ProductCard = ({
 
   const handleCardClick = () => {
     navigate('/itemdetails', { state: { product: { id, name, imagesrc, packageInfo, originalPrice, discountPercentage, finalPrice, pricePerPiece, rating } } });
-  };  
+  };
 
   const handleToggleFavourite = (e) => {
     e.stopPropagation();
@@ -26,12 +25,12 @@ const ProductCard = ({
   };
 
   return (
-    <div className="w-64 flex-shrink-0">
+    <div className="w-44 sm:w-64 flex-shrink-0">
       <div 
-        className="bg-white rounded-lg p-3 flex flex-col items-start justify-start border-2 border-[#D9D9D9] gap-1 cursor-pointer hover:shadow-lg transition-shadow"
+        className="bg-white rounded-lg p-2 sm:p-3 flex flex-col items-start justify-start border-2 border-[#D9D9D9] gap-1 sm:gap-1 cursor-pointer hover:shadow-lg transition-shadow"
         onClick={handleCardClick}
       >
-        <div className="relative w-full h-48 border border-[#D9D9D9] flex items-center justify-center rounded-lg overflow-hidden">
+        <div className="relative w-full h-32 sm:h-48 border border-[#D9D9D9] flex items-center justify-center rounded-lg overflow-hidden">
           <img 
             src={imagesrc} 
             alt={name} 
@@ -58,23 +57,23 @@ const ProductCard = ({
           </button>
         </div>
 
-        <h2 className="text-xl text-[#262626]">{name}</h2>
-        <p className="text-[#686363]">{packageInfo}</p>
+        <h4 className="text-xs sm:text-xl text-[#262626]">{name}</h4>
+        <p className="text-xs sm:text-sm text-[#686363]">{packageInfo}</p>
 
         <div className="w-full flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <span className="text-[#686363] line-through">₹{originalPrice}</span>
-            <span className="text-[#133DF6] font-bold">{discountPercentage}% off</span>
+          <div className="flex items-center gap-2 sm:gap-3">
+            <span className="text-xs sm:text-sm text-[#686363] line-through">₹{originalPrice}</span>
+            <span className="text-xs sm:text-sm text-[#133DF6] font-bold">{discountPercentage}% off</span>
           </div>
-          <div className="flex items-center px-2 bg-[#133DF6] text-white scale-90 rounded-md">
-            <span>{rating}</span>
-            <span className="ml-0.5 scale-90">★</span>
+          <div className="flex items-center px-1 sm:px-2 bg-[#133DF6] text-white scale-90 rounded-md">
+            <span className="text-xs sm:text-sm">{rating}</span>
+            <span className="ml-0.5 scale-90 text-xs sm:text-sm">★</span>
           </div>
         </div>
 
-        <div className="flex items-center gap-3">
-          <span className="text-2xl font-bold text-[#262626]">₹{finalPrice}</span>
-          <span className="font-bold opacity-90 scale-90">@₹{pricePerPiece}-per piece</span>
+        <div className="flex items-center gap-2 sm:gap-3">
+          <span className="text-lg sm:text-2xl font-bold text-[#262626]">₹{finalPrice}</span>
+          <span className="text-xs sm:text-sm font-bold opacity-90 scale-90">@₹{pricePerPiece}-per piece</span>
         </div>
       </div>
     </div>
