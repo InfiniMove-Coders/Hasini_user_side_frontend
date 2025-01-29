@@ -21,7 +21,7 @@ const ItemCard = ({ item }) => {
 	}
 
 	return (
-		<div className="w-full border-[black] border-[0px] flex flex-col items-center justify-start gap-[15px] cursor-pointer"
+		<div className="md:w-full w-[42dvw] border-[black] border-[0px] flex flex-col items-center justify-start gap-[15px] cursor-pointer"
 			onClick={AddToCart}
 		>
 			<div className="w-full h-auto bg-white rounded-[6px] p-[10px] flex flex-col items-start justify-start border-[#D9D9D9] border-[2px] gap-[5px]">
