@@ -5,8 +5,8 @@ const Footer = () => {
   return (
     <footer className="bg-violet-500 text-white w-full">
       <div className="hidden md:block">
-        <div className="flex justify-between px-6 py-4"> 
-          
+        <div className="flex justify-between px-6 py-4">
+
           <div className="max-w-sm">
             <img
               src="/images/icons/logo.png"
@@ -14,9 +14,9 @@ const Footer = () => {
               className="w-20 h-20 ml-36"
             />
             <p className="text-m mb-4 text-justify">
-              Hasini Enterprises, your trusted destination for the finest selection of wholesale biscuits, 
+              Hasini Enterprises, your trusted destination for the finest selection of wholesale biscuits,
               chocolates, and kids' snacks! Established with a passion for delivering happiness in every bite,
-               we are committed to providing high-quality products to retailers and businesses at competitive prices.
+              we are committed to providing high-quality products to retailers and businesses at competitive prices.
             </p>
             <p className="text-m">
               Ready to stock your shelves with the best snacks in town? Contact us today!
@@ -42,7 +42,7 @@ const Footer = () => {
               <h3 className="text-3xl font-bold mb-4">Information</h3>
               <ul className="space-y-2">
                 <li><a href="#" className="text-m">About Us</a></li>
-                <li><a href="#" className="text-m">Contact Us</a></li>
+                <li><a href="/contact" className="text-m">Contact Us</a></li>
                 <li><a href="#" className="text-m">Terms and Conditions</a></li>
               </ul>
             </div>
@@ -83,7 +83,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="flex items-center justify-center text-sm space-x-2 mt-4">
           <span>Copyright © 2024 Hasini Enterprises | Powered By</span>
           <img className="h-7 w-auto" src="/images/icons/companyLogo.svg" alt="Logo" />
@@ -102,10 +102,10 @@ const Footer = () => {
               className="w-16 h-16 mb-4 ml-10"
             />
             <p className="text-sm mb-4">
-              Hasini Enterprises, your trusted destination for the finest selection of wholesale biscuits, 
+              Hasini Enterprises, your trusted destination for the finest selection of wholesale biscuits,
               chocolates, and kids' snacks! Established with a passion for delivering happiness in every bite,
-               we are committed to providing high-quality products to retailers and businesses at competitive prices.
-               Ready to stock your shelves with the best snacks in town? Contact us today!
+              we are committed to providing high-quality products to retailers and businesses at competitive prices.
+              Ready to stock your shelves with the best snacks in town? Contact us today!
             </p>
             <p className="text-sm">Call Us - 9988776655</p>
           </div>
@@ -126,7 +126,7 @@ const Footer = () => {
               <h3 className="text-lg font-bold ">Information</h3>
               <ul className=" text-sm">
                 <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
                 <li><a href="#">Terms and Conditions</a></li>
               </ul>
             </div>

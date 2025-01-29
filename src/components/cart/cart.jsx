@@ -8,9 +8,9 @@ import Footer from '../footer/footer';
 const Cart = () => {
 	const navigate = useNavigate();
 	const [cartItems, setCartItems] = useState([
-		{ id: 1, name: 'Dairy Melts, Chocolate Bars', price: 165, quantity: 1, image: '/src/assets/images/ganesh/Rectangle.png' },
-		{ id: 2, name: 'Dairy Melts, Chocolate Bars', price: 165, quantity: 1, image: '/src/assets/images/ganesh/Rectangle.png' },
-		{ id: 3, name: 'Dairy Melts, Chocolate Bars', price: 165, quantity: 1, image: '/src/assets/images/ganesh/Rectangle.png' },
+		{ id: 1, name: 'Dairy Melts, Chocolate Bars', price: 165, quantity: 1, image: '/images/ganesh/Rectangle.png' },
+		{ id: 2, name: 'Dairy Melts, Chocolate Bars', price: 165, quantity: 1, image: '/images/ganesh/Rectangle.png' },
+		{ id: 3, name: 'Dairy Melts, Chocolate Bars', price: 165, quantity: 1, image: 'images/ganesh/Rectangle.png' },
 	]);
 
 	const updateQuantity = (id, change) => {
