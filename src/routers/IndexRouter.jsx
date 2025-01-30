@@ -15,6 +15,7 @@ import Login from "../components/login/login"
 import Signup from "../components/signup/signup"
 import Cart from "../components/cart/cart"
 import Favourite from "../components/favourite/Favourite"
+import AboutPage from "../components/Categories/About/About"
 
 const IndexRouter = () => {
 
@@ -40,6 +41,7 @@ const IndexRouter = () => {
 			<Route path='login' element={<Login />} />
 			<Route path='signup' element={<Signup />} />
 			<Route path='cart' element={<Cart />} />
+			<Route path='about' element={<AboutPage/>} />
 			<Route path="*" element={<NotFound />} />
 		</Routes >
 	)
