@@ -61,7 +61,15 @@
     gap: 1dvw;
   }
   .custom-pagination .swiper-pagination-bullet {
-    width: 2dvw;
-    height: 2dvw;
+    width: 1.5dvw;
+    height: 1.5dvw;
+  }
+  .custom-navigation{
+    gap:1dvw;
+  }
+  .custom-navigation .custom-prev,
+  .custom-navigation .custom-next{
+    border:0px solid black;
+    padding:1dvw;
   }
 }
