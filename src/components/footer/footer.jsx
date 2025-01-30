@@ -41,7 +41,7 @@ const Footer = () => {
             <div>
               <h3 className="text-3xl font-bold mb-4">Information</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="text-m">About Us</a></li>
+                <li><a href="/about" className="text-m">About Us</a></li>
                 <li><a href="/contact" className="text-m">Contact Us</a></li>
                 <li><a href="#" className="text-m">Terms and Conditions</a></li>
               </ul>
@@ -125,7 +125,7 @@ const Footer = () => {
             <div className="mb-4">
               <h3 className="text-lg font-bold ">Information</h3>
               <ul className=" text-sm">
-                <li><a href="#">About Us</a></li>
+                <li><a href="/about">About Us</a></li>
                 <li><a href="/contact">Contact Us</a></li>
                 <li><a href="#">Terms and Conditions</a></li>
               </ul>
