@@ -104,7 +104,7 @@ const ItemDetails = () => {
 					<p className="md:text-[100%] text-[3dvw]">PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive.</p>
 					<p className="mt-[10px] md:text-[100%] text-[3dvw]">{"33"} Pcs / Box , {"24"} Box /Carton</p>
 					<div className="w-full h-auto mt-[20px] flex flex-row items-center justify-start flex-wrap gap-[20px]">
-						<div className="w-fit h-auto flex flex-row items-center justify-between border-[rgba(0,0,0,0.8)] border-[0px]">
+						<div className="w-fit h-auto md:flex hidden flex-row items-center justify-between border-[rgba(0,0,0,0.8)] border-[0px]">
 							<div className="w-fit h-auto flex items-center justify-center border-[1px] border-[#00000080] cursor-pointer hover:bg-[#133DF6] hover:text-white p-[5px]" onClick={countDecrease}>
 								<Remove />
 							</div>
@@ -116,13 +116,32 @@ const ItemDetails = () => {
 							</div>
 						</div>
 						<button
-							className="px-[25px] py-[6px] text-white rounded-[4px] bg-[#133DF6] cursor-pointer"
+							className="px-[25px] py-[6px] md:block hidden md:text-white text-[black] rounded-[4px] md:bg-[#133DF6] bg-[white] cursor-pointer md:border-[0px] border-[2px] border-[#133DF6]"
 							onClick={AddToCart}
 						>
 							Add to Cart
 						</button>
+						<div className="md:hidden flex flex-row items-center justify-between flex-wrap gap-[2dvw] w-[85%] h-auto m-auto border-[0px] border-[black]">
+							<div className="w-fit h-auto flex flex-row items-center justify-between border-[rgba(0,0,0,0.8)] border-[0px]">
+								<div className="w-fit h-auto flex items-center justify-center border-[1px] border-[#00000080] cursor-pointer hover:bg-[#133DF6] hover:text-white p-[5px]" onClick={countDecrease}>
+									<Remove />
+								</div>
+								<p className="border-t-[#00000080] border-b-[#00000080] border-[1px] w-fit flex items-center justify-center py-[5px] px-[30px]">
+									{count}
+								</p>
+								<div className="w-auto h-auto flex items-center justify-center border-[1px] border-[#00000080] cursor-pointer hover:bg-[#133DF6] hover:text-white p-[5px]" onClick={countIncrease}>
+									<Add />
+								</div>
+							</div>
+							<button
+								className="px-[25px] py-[6px] md:text-white text-[black] rounded-[4px] md:bg-[#133DF6] bg-[white] cursor-pointer md:border-[0px] border-[2px] border-[#133DF6]"
+								onClick={AddToCart}
+							>
+								Add to Cart
+							</button>
+						</div>
 						<button
-							className="px-[25px] py-[6px] text-white rounded-[4px] bg-[#133DF6] cursor-pointer"
+							className="px-[25px] md:py-[6px] py-[2dvw] text-white rounded-[4px] bg-[#133DF6] cursor-pointer md:w-auto w-[85%] m-auto md:m-0"
 							onClick={BuyProduct}
 						>
 							Buy Now

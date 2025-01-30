@@ -6,8 +6,11 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import { EffectCoverflow, Pagination, Autoplay, Navigation } from "swiper/modules";
 import { ArrowBack, ArrowForward } from "@mui/icons-material";
+import Dimensions from "../others/Dimensions";
 
 const Carousel = () => {
+
+	const medium = Dimensions.medium();
 
 	const handleSlideChange = (swiper) => {
 		swiper.slides.forEach((slide) => {
@@ -85,9 +88,9 @@ const Carousel = () => {
 				</Swiper>
 
 				<div className="custom-navigation border-[black] border-[0px]">
-					<button className="custom-prev"><ArrowBack /></button>
+					<button className="custom-prev"><ArrowBack style={{ fontSize: medium ? "4.5dvw" : "", }} /></button>
 					<div className="custom-pagination"></div>
-					<button className="custom-next"><ArrowForward /></button>
+					<button className="custom-next"><ArrowForward style={{ fontSize: medium ? "4.5dvw" : "", }} /></button>
 				</div>
 
 
