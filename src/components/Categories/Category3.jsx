@@ -25,12 +25,12 @@ const Category3 = () => {
   ];
 
   return (
-    <div className="bg-blue-600 w-full py-8">
+<div className="bg-gradient-to-br from-blue-700 via-blue-700 to-blue-200 w-full py-8">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-white text-2xl font-bold text-center mb-8">
           OUR GENUINITY
         </h2>
-        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 gap-4 sm:gap-2 md:gap-4">
+        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 sm:gap-2 md:gap-4">
           {features.map((feature, index) => (
             <div
               key={index}
@@ -39,9 +39,9 @@ const Category3 = () => {
               <img
                 src={feature.imageSrc}
                 alt={feature.title}
-                className="w-16 h-16 mb-3 object-contain sm:w-14 sm:h-14"
+                className="w-16 h-16 mb-3 object-contain sm:w-24 sm:h-24"
               />
-              <span className="text-xs text-center sm:text-sm whitespace-nowrap">
+              <span className="text-xs text-center sm:text-xs whitespace-nowrap">
                 {feature.title}
               </span>
             </div>
