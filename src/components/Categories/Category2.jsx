@@ -185,9 +185,10 @@ const Category2 = () => {
 
   return (
     <div className="max-w-7xl mx-auto p-6">
-      <div className="flex items-center justify-between">
-  <h2 className="text-2xl font-semibold text-gray-800">Biscuits </h2>
-</div>
+    <div className="flex items-center">
+      <h2 className="text-4xl font-semibold text-blue-600">Biscuits</h2>
+      <span className="text-5xl text-blue-600  mb-6">→</span>
+    </div>
 
 
       <div className="flex overflow-x-scroll space-x-4 pb-4 scrollbar-hide">

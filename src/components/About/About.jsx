@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navbar1 from '../navbar/Navbar1';
 import Navbar2 from '../navbar/Navbar2';
@@ -56,7 +57,7 @@ const AboutPage = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 ml-8 sm:ml-16">
           <div className="bg-white rounded-3xl border-2 p-4 flex flex-col items-center w-48 sm:w-56 max-w-xs ml-10">
             <div className="bg-gray-100 p-4 rounded-full mb-4">
-              <img src="/images/ganesh/ab1.png" alt="Sellers" className="w-8 h-8" />
+              <img src="/images/ganesh/ab1.png" alt="Sellers" className="w-10 h-10" />
             </div>
             <h3 className="text-2xl sm:text-3xl font-bold mb-2">10.5k</h3>
             <p className="text-gray-600 text-center">Sellers active on our site</p>
@@ -64,7 +65,7 @@ const AboutPage = () => {
 
           <div className="bg-[#133DF6] rounded-3xl border-2 p-4 flex flex-col items-center text-white w-48 sm:w-56 max-w-xs ml-10">
             <div className="bg-white/20 p-4 rounded-full mb-4">
-              <img src="/images/ganesh/ab2.png" alt="Monthly Sales" className="w-8 h-8" />
+              <img src="/images/ganesh/ab2.png" alt="Monthly Sales" className="w-10 h-10" />
             </div>
             <h3 className="text-2xl sm:text-3xl font-bold mb-2">33k</h3>
             <p className="text-center">Monthly Product Sales</p>
@@ -72,7 +73,7 @@ const AboutPage = () => {
 
           <div className="bg-white rounded-3xl border-2 p-4 flex flex-col items-center w-48 sm:w-56 max-w-xs ml-10">
             <div className="bg-gray-100 p-4 rounded-full mb-4">
-              <img src="/images/ganesh/ab3.png" alt="Customers" className="w-8 h-8" />
+              <img src="/images/ganesh/ab3.png" alt="Customers" className="w-10 h-10" />
             </div>
             <h3 className="text-2xl sm:text-3xl font-bold mb-2">45.5k</h3>
             <p className="text-gray-600 text-center">Customers active on our site</p>
@@ -80,7 +81,7 @@ const AboutPage = () => {
 
           <div className="bg-white rounded-3xl border-2 p-4 flex flex-col items-center w-48 sm:w-56 max-w-xs ml-10">
             <div className="bg-gray-100 p-4 rounded-full mb-4">
-              <img src="/images/ganesh/ab4.png" alt="Annual Sales" className="w-8 h-8" />
+              <img src="/images/ganesh/ab4.png" alt="Annual Sales" className="w-10 h-10" />
             </div>
             <h3 className="text-2xl sm:text-3xl font-bold mb-2">25k</h3>
             <p className="text-gray-600 text-center">Annual gross sales on our site</p>

@@ -3,7 +3,7 @@ import React from 'react';
 const Category3 = () => {
   const features = [
     {
-      imageSrc: "/images/chaithu/POP.gif",
+      imageSrc: "/images/chaithu/POP.gif", 
       title: 'Prior Customer Satisfaction',
     },
     {
