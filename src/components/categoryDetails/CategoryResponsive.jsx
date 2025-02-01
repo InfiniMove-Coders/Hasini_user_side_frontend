@@ -31,7 +31,7 @@ const CategoryResponsive = () => {
 				}}
 			><ArrowBack /> Categories</p>
 
-			<div className="w-[100%] h-auto mt-[10dvw] mb-[10dvw] border-[0px] border-[black] flex flex-row items-start justify-around flex-wrap gap-y-[30px]">
+			<div className="w-[100%] h-auto mt-[10dvw] mb-[40dvw] border-[0px] border-[black] flex flex-row items-start justify-around flex-wrap gap-y-[30px]">
 				<div className="w-[38dvw] h-[43dvw] rounded-[6px] border-[1px] border-[#FFD70066] flex flex-col items-center justify-between pb-[2px] gap-[2px] shadow-[8px_8px_6px_rgba(0,0,0,0.1)] hover:scale-[1.1] hover:transition-all origin-top-left ease-in-out"
 					onClick={() => {
 						navigate("/category", { state: { keyStatusState: 0 } })
@@ -94,7 +94,7 @@ const CategoryResponsive = () => {
 				</div>
 			</div>
 
-			<Footer />
+			{/* <Footer /> */}
 		</>
 	)
 }

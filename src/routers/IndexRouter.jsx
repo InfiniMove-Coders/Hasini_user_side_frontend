@@ -16,6 +16,8 @@ import Signup from "../components/signup/signup"
 import Cart from "../components/cart/cart"
 import Favourite from "../components/favourite/Favourite"
 import AboutPage from "../components/About/About"
+import AccountResponsive from "../components/account/AccountResponsive"
+import Profile from "../components/MyAccount/Profile"
 
 const IndexRouter = () => {
 
@@ -31,10 +33,16 @@ const IndexRouter = () => {
 					<Route path="categories" element={<CategoryResponsive />} />
 					<Route path="orders" element={<Orders />} />
 					<Route path="cancellations" element={<Cancellations />} />
+					<Route path="account" element={<AccountResponsive />} />
+					<Route path="profile" element={<Profile />} />
 				</>
 			}
 			<Route path="itemdetails" element={<ItemDetails />} />
-			<Route path="account" element={<Account />} />
+			{!medium &&
+				<>
+					<Route path="account" element={<Account />} />
+				</>
+			}
 			<Route path="favourite" element={<Favourite />} />
 			<Route path="contact" element={<ContactForm />} />
 			<Route path="Loading" element={<Loading />} />
