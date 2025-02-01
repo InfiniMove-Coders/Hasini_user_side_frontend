@@ -49,7 +49,7 @@ const IndexRouter = () => {
 			<Route path='login' element={<Login />} />
 			<Route path='signup' element={<Signup />} />
 			<Route path='cart' element={<Cart />} />
-			<Route path='about' element={<AboutPage />} />
+			<Route path='about'element={<AboutPage/>} />
 			<Route path="*" element={<NotFound />} />
 		</Routes >
 	)

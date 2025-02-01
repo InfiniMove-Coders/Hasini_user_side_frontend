@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+
 const ProductCard = ({
   id,
   name,
@@ -11,6 +12,7 @@ const ProductCard = ({
   finalPrice,
   pricePerPiece,
   rating,
+  Productkey=0
 }) => {
   const [favourite, setFavourite] = useState(false);
   const navigate = useNavigate();
@@ -25,12 +27,12 @@ const ProductCard = ({
   };
 
   return (
-    <div className="w-44 sm:w-64 flex-shrink-0">
+    <div className="w-36 sm:w-64 flex-shrink-0">
       <div 
         className="bg-white rounded-lg p-2 sm:p-3 flex flex-col items-start justify-start border-2 border-[#D9D9D9] gap-1 sm:gap-1 cursor-pointer hover:shadow-lg transition-shadow"
         onClick={handleCardClick}
       >
-        <div className="relative w-full h-32 sm:h-48 border border-[#D9D9D9] flex items-center justify-center rounded-lg overflow-hidden">
+        <div className="relative w-full h-28 sm:h-48 border border-[#D9D9D9] flex items-center justify-center rounded-lg overflow-hidden">
           <img 
             src={imagesrc} 
             alt={name} 
@@ -42,7 +44,7 @@ const ProductCard = ({
           >
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
-              className="w-6 h-6" 
+              className="w-4 h-4" 
               fill={favourite ? "red" : "none"}
               viewBox="0 0 24 24" 
               stroke={favourite ? "red" : "gray"}
@@ -82,7 +84,7 @@ const ProductCard = ({
 
 const Category1 = () => {
   const navigate = useNavigate();
-  //backend data
+
   const products = [
     {
       id: "1",
@@ -165,30 +167,21 @@ const Category1 = () => {
       rating: 4.5,
     
     },
-    {
-      id: "7",
-      name: "Dairy Melts, Chocolate Bar",
-      imageUrl: "/api/placeholder/400/320",
-      packageInfo: "33 Pcs/Box, 24 Box/Carton",
-      originalPrice: 170,
-      discountPercentage: 3,
-      finalPrice: 175,
-      pricePerPiece: 5,
-      rating: 4.5,
-    }
   ];
+
   const handleViewMore = () => {
     navigate('/category');
   };
 
   return (
     <div className="max-w-7xl mx-auto p-6">
-      <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-semibold text-gray-800">Chocolates</h2>
+      <div className="flex items-center">
+        <h2 className="text-4xl font-semibold text-[#4A2C2A]">Chocolates</h2>
+        <span className="text-5xl text-[#4A2C2A]  mb-6">→</span>
       </div>
 
       <div className="flex overflow-x-scroll space-x-4 pb-4 scrollbar-hide">
-        {products.slice(0, 7).map((product) => (
+        {products.map((product) => (
           <ProductCard key={product.id} {...product} />
         ))}
 
@@ -207,5 +200,4 @@ const Category1 = () => {
     </div>
   );
 };
-
 export default Category1;

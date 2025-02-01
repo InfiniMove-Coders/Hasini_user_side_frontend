@@ -121,7 +121,6 @@ const Footer = () => {
                 <li><a href="#">Miscellaneous</a></li>
               </ul>
             </div>
-
             <div className="mb-4">
               <h3 className="text-lg font-bold ">Information</h3>
               <ul className=" text-sm">
