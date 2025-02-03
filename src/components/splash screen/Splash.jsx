@@ -8,7 +8,7 @@ const SplashScreen = () => {
 	const [openStatus, setOpenStatus] = useState(true);
 
 	const loading = () => {
-		localStorage.setItem("hasiniAnimation", "complete");
+		sessionStorage.setItem("hasiniAnimation", "complete");
 		setOpenStatus(false);
 	}
 
@@ -19,7 +19,7 @@ const SplashScreen = () => {
 	}, [animationComplete, navigate]);
 
 	useEffect(() => {
-		if (localStorage.getItem("hasiniAnimation") == "complete") {
+		if (sessionStorage.getItem("hasiniAnimation") == "complete") {
 			setOpenStatus(false)
 		}
 		else {
